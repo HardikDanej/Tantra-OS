@@ -1,0 +1,9 @@
+# Tantra reads and signs exact file bytes (frontmatter parsing, the Tantra Seal
+# manifest), so every checkout uses LF, including on Windows with core.autocrlf.
+* text=auto eol=lf
+*.png binary
+*.jpg binary
+*.gif binary
+*.ico binary
+*.pdf binary
+*.zip binary

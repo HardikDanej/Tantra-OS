@@ -1,0 +1,9 @@
+{
+  "_comment": "Copy this to a real workspace as memory/budget_config.json and fill in real limits for the connectors you actually use. Tool ids match data-model/core_data_model.json's tool_registry. Leave max_cost_usd null unless you have a real, cited per-call/per-month figure -- tool_usage_ledger.py never guesses one.",
+  "survey_platform_connector": {"period_days": 30, "max_calls": "REPLACE_WITH_YOUR_LIMIT", "max_cost_usd": null},
+  "product_analytics_connector": {"period_days": 30, "max_calls": "REPLACE_WITH_YOUR_LIMIT", "max_cost_usd": null},
+  "media_coverage_connector": {"period_days": 30, "max_calls": "REPLACE_WITH_YOUR_LIMIT", "max_cost_usd": null},
+  "social_profile_connector": {"period_days": 30, "max_calls": "REPLACE_WITH_YOUR_LIMIT", "max_cost_usd": null},
+  "hubspot_connector": {"period_days": 30, "max_calls": "REPLACE_WITH_YOUR_LIMIT", "max_cost_usd": null},
+  "press_wire_connector": {"period_days": 30, "max_calls": "REPLACE_WITH_YOUR_LIMIT", "max_cost_usd": null}
+}

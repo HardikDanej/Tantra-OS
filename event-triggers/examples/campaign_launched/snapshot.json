@@ -1,0 +1,38 @@
+[
+  {
+    "account_id": "acc1",
+    "ad_id": "ad_100",
+    "ad_name": "Summer Promo",
+    "adset_name": "retargeting",
+    "campaign_name": "Summer Sale",
+    "clicks": "300",
+    "conversions": "12",
+    "cpm": "15.0",
+    "ctr": "0.03",
+    "date": "2026-08-25",
+    "frequency": "1.2",
+    "impressions": "10000",
+    "platform": "meta",
+    "platform_meta_json": "{}",
+    "revenue": "600",
+    "spend": "150.0"
+  },
+  {
+    "account_id": "acc1",
+    "ad_id": "ad_101",
+    "ad_name": "Evergreen",
+    "adset_name": "prospecting",
+    "campaign_name": "Always On",
+    "clicks": "100",
+    "conversions": "4",
+    "cpm": "16.0",
+    "ctr": "0.02",
+    "date": "2026-08-25",
+    "frequency": "1.1",
+    "impressions": "5000",
+    "platform": "meta",
+    "platform_meta_json": "{}",
+    "revenue": "200",
+    "spend": "80.0"
+  }
+]

@@ -1,0 +1,57 @@
+{
+  "_comment": "Reusable evidence library that the long-form-article-architect skill draws from when writing articles. Populate this with REAL citations the brand can authentically claim. Generic citations weaken E-E-A-T audits — specificity is the whole point.",
+
+  "_structure": "Each entry has a category (experience/expertise/authority/trust), a topic_tags array (so the architect can find relevant evidence per article), the actual evidence content, source attribution, and a usage_note explaining how to integrate it.",
+
+  "evidence_pool": [
+    {
+      "id": "case_001",
+      "category": "experience",
+      "topic_tags": ["customer success", "saas onboarding", "churn reduction"],
+      "evidence": "In Q2 2025 we worked with a 200-seat B2B SaaS company that reduced 90-day churn from 14% to 6.2% by replacing their automated onboarding flow with a 1:1 success manager touchpoint at days 7, 21, and 60.",
+      "source": "Internal case study, customer named in published version",
+      "usage_note": "Use as a primary specific in articles about onboarding or churn. Include the specific numbers — vague claims ('we've seen massive improvements') trigger E-E-A-T audit failures."
+    },
+    {
+      "id": "research_001",
+      "category": "expertise",
+      "topic_tags": ["content marketing", "seo", "publication frequency"],
+      "evidence": "Our analysis of 847 B2B blogs over 12 months found that publication consistency (same day each week) correlated more strongly with organic traffic growth (r=0.61) than publication volume alone (r=0.34).",
+      "source": "Original research published [date], methodology in appendix",
+      "usage_note": "Use when arguing for editorial discipline. Always link to the underlying methodology — research without methodology fails Trust audit."
+    },
+    {
+      "id": "expert_001",
+      "category": "authority",
+      "topic_tags": ["b2b sales", "enterprise sales cycle", "meddpicc"],
+      "evidence": "Customer's VP Sales (former Salesforce enterprise AE, 12 years) on why MEDDPICC outperforms BANT for $100k+ ACV: 'BANT optimizes for finding deals you can close. MEDDPICC optimizes for finding deals worth closing.'",
+      "source": "Quote used with permission, contributor bio in author box",
+      "usage_note": "Direct quotes from named experts with verifiable credentials clear the Authority bar instantly. Don't paraphrase to avoid attribution — the attribution IS the value."
+    },
+    {
+      "id": "data_001",
+      "category": "trust",
+      "topic_tags": ["pricing transparency", "saas benchmarks"],
+      "evidence": "Median annual contract value across surveyed B2B SaaS in our cohort (n=312, ARR $1M-$50M): $8,400. 75th percentile: $24,000. The frequently cited '$50k average ACV' figure overstates the market by roughly 6x.",
+      "source": "Aggregated cohort data, 2025 benchmark report",
+      "usage_note": "Use when correcting a category misconception. Trust signals come from being willing to disagree with conventional wisdom AND showing your math."
+    },
+    {
+      "id": "case_002",
+      "category": "experience",
+      "topic_tags": ["paid acquisition", "creative testing", "meta ads"],
+      "evidence": "Across 14 ecommerce accounts we audited in 2025, the median creative had a useful life of 23 days at >$5k/week spend before fatigue set in. Top-quartile creatives lasted 41 days; bottom-quartile fatigued in 12.",
+      "source": "Internal audit dataset, methodology available on request",
+      "usage_note": "Specific median + quartile + sample size beats round-number assertions every time. The audit will reward this structure."
+    }
+  ],
+
+  "_how_to_add_evidence": "The architect skill scans this file by topic_tags. Add entries whenever you produce new case studies, run new research, or capture a quotable expert insight. Aim for 30-50 entries within 6 months of running the workflow — the per-article quality bar rises measurably as the library grows.",
+
+  "_anti_patterns": [
+    "DO NOT add evidence you cannot defend if challenged. The architect will use these citations and the audit will check them.",
+    "DO NOT add generic platitudes ('Studies show that customer experience matters'). The audit detects and rejects these.",
+    "DO NOT add evidence without attribution. Trust failures come from unattributed claims.",
+    "DO NOT recycle the same case study across 20 articles. Use case_001 for onboarding articles only; build separate case studies for separate topics."
+  ]
+}

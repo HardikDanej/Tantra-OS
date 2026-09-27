@@ -1,0 +1,16 @@
+{
+  "_comment": "Ships committed with a placeholder competitor entry. Replace with real competitor names/URLs before relying on this — an empty or placeholder list means nothing meaningful gets monitored, not an error, so double-check this file actually reflects who you're tracking.",
+
+  "competitors": [
+    {
+      "name": "REPLACE_WITH_COMPETITOR_NAME",
+      "urls": [
+        "https://REPLACE_WITH_COMPETITOR_DOMAIN.com",
+        "https://REPLACE_WITH_COMPETITOR_DOMAIN.com/pricing"
+      ],
+      "_help": "Pick pages that actually change when something worth knowing happens — homepage, pricing, and a product/features page are usually the highest-signal three. Monitoring every page on a competitor's site produces mostly noise (nav tweaks, blog post carousels) for the same review effort."
+    }
+  ],
+
+  "_note_on_ad_library_reaudit": "This file only configures the deterministic site-diff script (site_snapshot.py). The periodic competitor AD-LIBRARY re-audit (Meta Ad Library / Google Ads Transparency Center) is a separate, LLM-driven path — see scheduled_prompt.md in this directory — because it needs WebFetch/WebSearch, which only a Claude session has, not a plain cron script."
+}

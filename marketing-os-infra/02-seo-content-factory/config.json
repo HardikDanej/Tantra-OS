@@ -1,0 +1,35 @@
+{
+  "_comment": "Ships committed with REPLACE_WITH_* placeholders only. Fill in real credentials for a live Tier 2 setup — NEVER commit the real values. Real credentials belong in a gitignored .env file. This file is not in .gitignore because the placeholder version is safe to commit; treat your filled-in copy as sensitive.",
+
+  "cms": {
+    "platform": "wordpress",
+    "_comment_platform": "Which connector cms_publish.py uses by default. One of \"wordpress\" or \"webflow\". Override per-run with --platform."
+  },
+
+  "wordpress": {
+    "enabled": true,
+    "site_url": "https://REPLACE_WITH_YOUR_SITE.com",
+    "username": "REPLACE_WITH_WP_USERNAME",
+    "app_password": "REPLACE_WITH_WP_APPLICATION_PASSWORD",
+    "yoast_meta_field": "",
+    "_help": "Application Passwords, not your login password: WordPress Admin -> Users -> Your Profile -> Application Passwords -> Add New Application Password. Requires WordPress 5.6+ (built in) or the Application Passwords plugin on older self-hosted sites. The account needs at least the Author role to create draft posts. yoast_meta_field is optional — set it to \"_yoast_wpseo_metadesc\" if the site runs Yoast and exposes that meta key on the REST API; leave blank otherwise (the meta description still gets written to the post excerpt)."
+  },
+
+  "webflow": {
+    "enabled": false,
+    "api_token": "REPLACE_WITH_WEBFLOW_API_TOKEN",
+    "site_id": "REPLACE_WITH_WEBFLOW_SITE_ID",
+    "collection_id": "REPLACE_WITH_WEBFLOW_CMS_COLLECTION_ID",
+    "field_map": {
+      "title_field": "name",
+      "slug_field": "slug",
+      "body_field": "post-body",
+      "meta_description_field": "meta-description"
+    },
+    "_help": "Generate a v2 Site API token at Webflow -> Site settings -> Apps & Integrations -> API access (scope: CMS read+write). collection_id is the target CMS collection's ID (e.g. Blog Posts) — find it via GET https://api.webflow.com/v2/sites/{site_id}/collections. field_map maps this script's fields to your collection's actual field slugs, which vary per site/template; open the collection's field settings in Webflow if a publish attempt errors with an unrecognized-field message."
+  },
+
+  "safety": {
+    "_comment": "There is no flag here to publish live. Draft-only is enforced in code, not by this file: marketing-os-infra/lib/cms_connector.py always sends WordPress status=draft and Webflow isDraft=true, and neither function accepts a parameter that could change that. Taking a draft live is a separate, deliberate action you take by hand in the CMS admin."
+  }
+}

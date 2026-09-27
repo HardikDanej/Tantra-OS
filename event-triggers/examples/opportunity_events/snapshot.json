@@ -1,0 +1,16 @@
+[
+  {
+    "amount": "50000",
+    "dealname": "Acme Corp - Enterprise",
+    "dealstage": "negotiation",
+    "id": "d1001",
+    "pipeline": "default"
+  },
+  {
+    "amount": "5000",
+    "dealname": "Beta LLC - Starter",
+    "dealstage": "closedwon",
+    "id": "d1002",
+    "pipeline": "default"
+  }
+]

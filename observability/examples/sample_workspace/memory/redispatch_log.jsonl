@@ -1,0 +1,5 @@
+{"cycle_id": "seo_eeat_article_42", "event": "attempt", "timestamp": "2026-08-02T10:00:00Z", "reason": "fails_eeat"}
+{"cycle_id": "seo_eeat_article_42", "event": "attempt", "timestamp": "2026-08-03T10:00:00Z", "reason": "fails_eeat"}
+{"cycle_id": "seo_eeat_article_42", "event": "attempt", "timestamp": "2026-08-04T10:00:00Z", "reason": "fails_eeat"}
+{"cycle_id": "creative_brief_9", "event": "attempt", "timestamp": "2026-08-06T10:00:00Z", "reason": "brand_voice_mismatch"}
+{"cycle_id": "creative_brief_9", "event": "resolved", "timestamp": "2026-08-07T10:00:00Z", "reason": "accepted on 2nd pass"}

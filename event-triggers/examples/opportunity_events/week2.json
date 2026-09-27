@@ -1,0 +1,5 @@
+[
+  {"id": "d1001", "dealname": "Acme Corp - Enterprise", "amount": "50000", "dealstage": "closedwon", "pipeline": "default"},
+  {"id": "d1002", "dealname": "Beta LLC - Starter", "amount": "5000", "dealstage": "closedwon", "pipeline": "default"},
+  {"id": "d1003", "dealname": "Gamma Inc - Pilot", "amount": "8000", "dealstage": "negotiation", "pipeline": "default"}
+]

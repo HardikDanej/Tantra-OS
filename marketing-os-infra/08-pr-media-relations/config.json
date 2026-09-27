@@ -1,0 +1,16 @@
+{
+  "_comment": "Fill in real credentials here. NEVER commit real tokens; add config.json to .gitignore for this workflow.",
+
+  "newsapi": {
+    "enabled": true,
+    "api_key": "REPLACE_WITH_NEWSAPI_KEY",
+    "_help": "newsapi.org → Get API Key. Free tier is rate-limited and delayed ~24h on some plans -- note that limitation in anything built from this data."
+  },
+
+  "platform_name": "generic_wire",
+  "endpoint_base": "REPLACE_WITH_YOUR_WIRE_VENDOR_API_BASE_URL",
+  "submit_path": "REPLACE_WITH_YOUR_WIRE_VENDOR_SUBMIT_PATH",
+  "api_key": "REPLACE_WITH_YOUR_WIRE_VENDOR_API_KEY",
+  "write_access_confirmed": false,
+  "_help_wire": "PR Newswire / Business Wire / GlobeNewswire don't publish a uniform public API -- most require a sales-negotiated contract. Get endpoint_base/submit_path/api_key from your actual vendor's own API documentation once that contract exists. write_access_confirmed is a separate, explicit opt-in -- leave it false until you've verified the vendor relationship and credentials are real."
+}

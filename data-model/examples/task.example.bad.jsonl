@@ -1,0 +1,2 @@
+{"agent": "seo-agent", "objective": "Missing dispatch_kind entirely.", "inputs": [], "constraints": [], "required_output_shape": ["OUTPUT"]}
+{"agent": "ads-paid-media-agent", "objective": "Wrong dispatch_kind value.", "inputs": [], "constraints": [], "dispatch_kind": "urgent", "required_output_shape": ["OUTPUT"]}

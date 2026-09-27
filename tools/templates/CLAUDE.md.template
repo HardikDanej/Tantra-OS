@@ -1,0 +1,56 @@
+# {{COMPANY_NAME}} — Marketing Workspace
+
+This directory is a company workspace for the `Tantra` framework (linked globally — see `~/Tantra`). Everything below is auto-loaded the moment Claude Code opens here; nothing in it needs to be repeated in conversation, and it applies before the first message is even sent.
+
+## Activation — Tantra runs only on the wake word
+
+Tantra routing applies only while Tantra is active in this session: the user's message used the wake word — it starts with `mk` (e.g. "mk audit our pricing page") or says "MK agent" anywhere — or a Tantra hook note reports that the Tantra marketing OS is active. Activation lasts for the rest of the session until the user says "mk off". The product name "Tantra" on its own is not a wake word.
+
+When Tantra is not active, answer normally and never dispatch a Tantra agent (an orchestrator, the bridge, a domain agent, or a sub-agent). If the ask looks like Tantra work, mention once that starting the message with "mk" runs it through the marketing OS. Scheduled or headless runs activate Tantra by starting their prompt with "mk " or by setting `TANTRA_ACTIVE=1`.
+
+## Routing — when active, through exactly one entry point
+
+While Tantra is active, every marketing request goes to exactly one of the six entry points below first — never answered directly from the top level, and never dispatched straight to a domain agent or sub-agent. Pick the ONE whose system most directly owns the core ask and dispatch the request to it as-is; that orchestrator runs its own DISPATCH/SYNTHESIZE contract and, if the request genuinely also needs another system's agents, calls `cross-system-dispatch-bridge` itself. Never dispatch to two entry points in parallel and never call the bridge from the top level. The wake word itself ("mk", "MK agent") is not part of the task — leave it out of the dispatched request.
+
+| Entry point | System | Reach for a request about... |
+|---|---|---|
+| `chief-marketing-orchestrator` | Digital Marketing & Growth | SEO, paid ads/media, website build quality, social strategy, drafting/copywriting, CRM/lifecycle/retention, conversion-rate optimization/growth ops |
+| `brand-creative-orchestrator` | Brand & Creative Marketing | Brand positioning/architecture, identity systems, rebrands, mission/values, brand equity tracking, editorial/content strategy (not drafting), organic social & community operations |
+| `product-marketing-gtm-orchestrator` | Product Marketing & Go-to-Market | Launch strategy, ICP/persona development for GTM, GTM motion selection, sales enablement/battlecards/decks, pricing & packaging, onboarding/adoption/expansion |
+| `market-research-insights-orchestrator` | Market Research & Consumer Insights | Primary research design (interviews, surveys, usability, JTBD), competitive/market intelligence, TAM/SAM/SOM sizing, attribution modeling, marketing analytics/KPIs |
+| `pr-corporate-communications-orchestrator` | Public Relations & Corporate Communications | Press/media relations, crisis communications, ESG/CSR, investor relations, government/labor relations, events & experiential marketing |
+| `enterprise-marketing-orchestrator` | Holistic, across systems (via the bridge) | A full company/website audit or "how are we doing across marketing, brand, GTM, research, and PR" — a holistic ask with no single owning system. Never for a request that plainly belongs to one system |
+
+If a request is genuinely ambiguous between two systems, pick the one that owns the *primary deliverable* being asked for (e.g. "write a pricing page" → Digital Marketing & Growth drafts it, but "decide our pricing tiers" → Product Marketing & GTM). Don't ask the user which system to use — that's exactly the kind of routing decision this table exists to make automatically.
+
+Requests with nothing to do with this brand's marketing (general coding help, an unrelated question) don't need any orchestrator, whether or not Tantra is active.
+
+## Identity
+
+This workspace's brand identity lives in `brand/company.json` — the Orchestrator reads it before asking who this engagement is for. Don't re-derive or re-ask; if it's missing, that's the Orchestrator's own Workspace Identity step to resolve, not a top-level question.
+
+## Company-specific boundaries
+
+Rules specific to {{COMPANY_NAME}} that hold regardless of what any agent's generic instructions say — a competitor never to name, a claim never to make without legal review, a topic that's off-limits, a spend ceiling, a mandatory approval step before anything goes out. The Orchestrator treats every rule listed here as equally hard as its own deterministic constraint boundaries (never authorizing spend, never writing to the CRM, and so on) — a dispatch that would cross one gets refused and explained, not quietly worked around.
+
+_(None recorded yet. Add them here as they come up. A blank section means "none have been written down yet," not "none exist" — don't let the two get treated as the same thing.)_
+
+## Connected tools (MCP)
+
+Apps, CRMs, and ERPs connect to Tantra over MCP only with the user's explicit approval. The user says "mk connect <app>" and the `tantra-connect` skill (main thread only) shows an approval card, opens a config-bound approval gate, and prints the `claude mcp add …` command for the user to run. Approved servers are recorded in `memory/mcp_connections.jsonl`; a server or tool not recorded there as connected is not approved, and write tools need their own `mcp_write_connection` approval. Agents never connect, authenticate, or call unapproved connectors, and secrets never go in chat — environment variables or OAuth only.
+
+## Deliverables & provenance
+
+File deliverables go in `deliverables/<YYYY-MM-DD>-<slug>/`. The Tantra Seal hook signs every file written there automatically (C2PA manifest + Ed25519 `<file>.tantra-sig.json` sidecar), declaring AI involvement honestly — never describe a deliverable as human-only. Verify any sealed file with `python ~/Tantra/.claude/lib/provenance.py verify-file <path>`.
+
+Tantra is proprietary to Hardik Danej; see LICENSE in the Tantra repository.
+
+## Workspace layout
+
+- `brand/` — who this company is, formally: `company.json` (identity), `personas.json`, `voice_system.json`, `icp_definition.md`. Written by the Marketing Strategist Agent, gated on real evidence.
+- `memory/` — what's happened: `checkpoints.jsonl`, `latest.json`, `outcomes.jsonl`, `redispatch_log.jsonl`, `evidence/`, and `mcp_connections.jsonl` (approved MCP connectors). Written by the Orchestrator, by any agent logging research evidence, and by the `tantra-connect` skill.
+- `.memory/` — brand-identity facts and competitor intel discovered incidentally, not from a formal engagement: `brand_identity.json`, `competitor_matrix.json`. Synced automatically at the end of a synthesis pass, only when something durable actually surfaced — a lighter, lower-confidence cache, never a substitute for `brand/` when a dispatch needs the real thing.
+- `deliverables/` — signed file deliverables, one dated folder per deliverable.
+- `.claude/settings.local.json` — this workspace's Tantra hooks, installed by `new_workspace.py` (machine-specific paths; reinstall with `python ~/Tantra/tools/install_hooks.py workspace .`).
+
+Scaffolded by `~/Tantra/tools/new_workspace.py`. See that repo's `README.md` for the full system this workspace runs on.

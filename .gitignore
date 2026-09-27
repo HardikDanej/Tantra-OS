@@ -1,0 +1,55 @@
+# Local credentials — never commit real tokens
+**/.env
+**/config.json.local
+**/*.token
+**/token.json
+**/client_secret.json
+
+# MCP server configs can carry headers/env values; connectors are configured
+# per workspace (local scope) via the tantra-connect skill, never committed here
+.mcp.json
+**/.mcp.json
+
+# Signing material — private keys live in ~/.tantra/keys, never in the repo.
+# Public certificates/keys for verification go in provenance/public/ (tracked).
+**/*.key
+**/*.p12
+**/*.pfx
+**/*private*.pem
+**/keys/
+!provenance/public/
+
+# Tantra hook installer backups of Claude Code settings
+**/*.tantra.bak
+
+# Python
+**/__pycache__/
+**/*.pyc
+**/.venv/
+
+# Eval run output — timestamped, regenerated on every run
+evals/results/*.json
+
+# OS noise
+.DS_Store
+Thumbs.db
+
+# unlazy — approval records live outside the repo; these are local run state
+.unlazy/
+.unlazy-hook-state.json
+
+# Node / platform app
+node_modules/
+
+# Workspace/runtime leakage at the framework repo root — a workspace is
+# always a separate directory (see INSTALL.md / new_workspace.py), never
+# nested inside this repo. These appear here only when the repo root
+# itself got used as a workspace by mistake during testing; excluded so
+# a real client's brand/memory data never ends up in this repo's history.
+/memory/
+/brand/
+/.memory/
+/scratch/
+/exports/
+/.tmp-preview*/
+/.workspaces/

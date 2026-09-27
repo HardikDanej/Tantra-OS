@@ -1,0 +1,52 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://tantra.local/connectors/mcp_catalog.schema.json",
+  "title": "Tantra MCP connector catalog",
+  "description": "Verified facts about vendor MCP servers that Tantra can propose connecting. Every entry is a claim with sources and a verification date; the tantra-connect skill re-verifies any entry older than 60 days and never invents an endpoint, package or tool name. This file is read by .claude/lib/mcp_connector_registry.py (propose --catalog-id) to fill the approval card and flag drift between a proposal and the verified entry.",
+  "type": "object",
+  "required": ["version", "generated_at", "entries"],
+  "additionalProperties": false,
+  "properties": {
+    "version": {"const": 1},
+    "generated_at": {"type": "string", "format": "date-time"},
+    "_comment": {"type": "string"},
+    "entries": {
+      "type": "array",
+      "items": {"$ref": "#/$defs/entry"}
+    }
+  },
+  "$defs": {
+    "tool_name": {"type": "string", "pattern": "^[A-Za-z0-9_.\\-]{1,128}$"},
+    "entry": {
+      "type": "object",
+      "required": ["id", "vendor", "display_name", "category", "official", "transport", "auth", "read_tools", "write_tools", "cost_note", "sources", "verified_at"],
+      "additionalProperties": false,
+      "properties": {
+        "id": {"type": "string", "pattern": "^[a-z0-9](?:[a-z0-9-]{0,62}[a-z0-9])?$", "description": "Stable catalog id; also the suggested --server name."},
+        "vendor": {"type": "string"},
+        "display_name": {"type": "string", "description": "Shown on the approval card's 'Connects' line."},
+        "category": {"enum": ["crm", "erp", "marketing-automation", "analytics", "ads", "cms", "docs-knowledge", "project-management", "communication", "commerce", "support", "data-warehouse", "design", "other"]},
+        "official": {"type": "boolean", "description": "true only when the vendor itself publishes and maintains the server."},
+        "transport": {"enum": ["http", "sse", "stdio", "claudeai"]},
+        "url": {"type": "string", "pattern": "^https://", "description": "Remote endpoint for http/sse. https only."},
+        "command": {"type": "string", "description": "stdio launcher, e.g. npx or uvx."},
+        "package": {"type": "string", "pattern": "^(@[^/\\s]+/)?[^@\\s]+(@|==)v?[0-9]+(\\.[0-9]+){1,3}([-+][0-9A-Za-z.\\-]+)?$", "description": "Version-pinned package for stdio servers, e.g. @vendor/mcp-server@1.2.3 or vendor-mcp==0.4.1."},
+        "auth": {"enum": ["oauth", "header_token", "env_token", "none", "claudeai"]},
+        "env_vars": {"type": "array", "items": {"type": "string", "pattern": "^[A-Za-z_][A-Za-z0-9_]*$"}, "description": "Names of the environment variables the server needs. Names only, never values."},
+        "headers": {"type": "object", "additionalProperties": {"type": "string", "pattern": "\\$\\{[A-Za-z_][A-Za-z0-9_]*(:-[^}]*)?\\}"}, "description": "Header templates, values as ${VAR} references only."},
+        "read_tools": {"type": "array", "items": {"$ref": "#/$defs/tool_name"}, "description": "Tools verified to only read."},
+        "write_tools": {"type": "array", "items": {"$ref": "#/$defs/tool_name"}, "description": "Tools that create, update, delete, send or trigger anything in the live system."},
+        "tools_complete": {"type": "boolean", "description": "true when read_tools + write_tools is the server's full tool list as of verified_at."},
+        "cost_note": {"type": "string", "description": "Plain statement of plan/tier requirements or 'free' -- shown verbatim on the approval card."},
+        "suggested_agents": {"type": "array", "items": {"type": "string"}, "description": "Tantra agents whose work the read tools feed (informational; frontmatter is never edited automatically)."},
+        "sources": {"type": "array", "minItems": 1, "items": {"type": "string", "pattern": "^https://"}, "description": "Vendor-official docs pages the entry was verified against."},
+        "verified_at": {"type": "string", "format": "date", "description": "YYYY-MM-DD of the last verification against sources."},
+        "notes": {"type": "string"}
+      },
+      "allOf": [
+        {"if": {"properties": {"transport": {"enum": ["http", "sse"]}}}, "then": {"required": ["url"]}},
+        {"if": {"properties": {"transport": {"const": "stdio"}}}, "then": {"required": ["command", "package"]}}
+      ]
+    }
+  }
+}

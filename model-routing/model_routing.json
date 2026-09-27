@@ -1,0 +1,59 @@
+{
+  "generated_at": "2026-09-06T16:03:04.638180+00:00",
+  "haiku_count": 6,
+  "model_routing_version": "1.0.0",
+  "opus_count": 6,
+  "override_count": 12,
+  "overrides": {
+    "accessibility-wcag-auditing-subagent": {
+      "model": "haiku",
+      "rationale": "Alt-text / heading-hierarchy / ARIA-landmark presence-checking against markup -- structural detection, explicitly not a compliance judgment (that's flagged unverifiable by the sub-agent itself)."
+    },
+    "broken-link-dead-page-scanning-subagent": {
+      "model": "haiku",
+      "rationale": "Status-code verification across fetched links -- pattern detection, not judgment."
+    },
+    "competitor-red-team-agent": {
+      "model": "opus",
+      "rationale": "Adversarial stress-test of a finalized strategic recommendation across the whole system -- a shallow pass here is the specific failure mode this agent exists to prevent."
+    },
+    "cross-system-dispatch-bridge": {
+      "model": "opus",
+      "rationale": "Cross-system contradiction-check and insight synthesis across up to 5 standalone agentic systems -- the highest-complexity single reasoning task in this repository."
+    },
+    "government-relations-public-policy-subagent": {
+      "model": "opus",
+      "rationale": "Active lobbying/policy-engagement strategy -- real compliance exposure, never a substitute for lobbying-compliance counsel."
+    },
+    "investor-relations-earnings-release-subagent": {
+      "model": "opus",
+      "rationale": "The sub-agent's own file calls this 'the highest-stakes sub-agent in this entire roster' -- real securities-law exposure (Regulation FD, MNPI, forward-looking-statement safe harbor)."
+    },
+    "js-rendering-dynamic-verification-subagent": {
+      "model": "haiku",
+      "rationale": "Confirms a JS element mounts / a toggle responds via a deterministic script (browser_render.py) -- verification of a binary outcome, not a strategic call."
+    },
+    "labor-relations-union-workplace-comms-subagent": {
+      "model": "opus",
+      "rationale": "The sub-agent's own file calls this 'the strictest legal refusal gate in this entire repository' -- real labor-law exposure (the TIPS framework)."
+    },
+    "ma-due-diligence-intelligence-subagent": {
+      "model": "opus",
+      "rationale": "The sub-agent's own file calls this 'the highest-stakes sub-agent in this roster' for M&A -- real confidentiality/valuation/fairness-opinion exposure."
+    },
+    "mobile-responsive-behavior-subagent": {
+      "model": "haiku",
+      "rationale": "Viewport meta tag / responsive CSS pattern presence-checking -- pattern detection, not judgment."
+    },
+    "security-posture-auditing-subagent": {
+      "model": "haiku",
+      "rationale": "HTTPS enforcement / security-header presence-checking -- explicitly black-box signal detection, never a vulnerability judgment call by the sub-agent's own stated boundary."
+    },
+    "tech-stack-fingerprinting-subagent": {
+      "model": "haiku",
+      "rationale": "CMS/framework identification from markup + response headers against known signatures -- pattern matching."
+    }
+  },
+  "policy": "Only agents listed in 'overrides' get an explicit model: frontmatter field. Every other agent in this repository (225 of 237) is deliberately left unset, which Claude Code resolves to 'inherit the parent session's model' -- the correct default for judgment-heavy marketing work, not a gap. See this script's own module docstring for the full reasoning.",
+  "total_agents": 237
+}

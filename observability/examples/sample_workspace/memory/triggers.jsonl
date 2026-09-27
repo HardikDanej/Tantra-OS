@@ -1,0 +1,5 @@
+{"trigger_id": "gate_age_check", "event": "registered", "timestamp": "2026-07-01T00:00:00Z", "kind": "condition", "params": {"condition": "pending_gate_age", "max_pending_days": 3}}
+{"trigger_id": "gate_age_check", "event": "fired", "timestamp": "2026-08-14T00:00:00Z", "kind": "condition", "detail": "final_creative_q3 pending 4 days"}
+{"trigger_id": "gate_age_check", "event": "acknowledged", "timestamp": "2026-08-14T09:00:00Z"}
+{"trigger_id": "redispatch_cap_check", "event": "registered", "timestamp": "2026-07-01T00:00:00Z", "kind": "condition", "params": {"condition": "redispatch_cap_reached"}}
+{"trigger_id": "redispatch_cap_check", "event": "fired", "timestamp": "2026-08-05T00:00:00Z", "kind": "condition", "detail": "seo_eeat_article_42 escalated"}

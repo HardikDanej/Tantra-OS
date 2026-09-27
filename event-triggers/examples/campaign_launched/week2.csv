@@ -1,0 +1,4 @@
+platform,account_id,ad_id,ad_name,campaign_name,adset_name,date,spend,impressions,clicks,conversions,revenue,frequency,ctr,cpm,platform_meta_json
+meta,acc1,ad_100,Summer Promo,Summer Sale,retargeting,2026-09-01,140.0,9500,290,11,580,1.2,0.03,15.0,{}
+meta,acc1,ad_101,Evergreen,Fall Rebrand,prospecting,2026-09-01,80.0,5000,100,4,200,1.1,0.02,16.0,{}
+meta,acc1,ad_102,New Launch,Product Launch Q4,prospecting,2026-09-01,50.0,2000,60,2,100,1.0,0.03,25.0,{}

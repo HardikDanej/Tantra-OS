@@ -1,0 +1,6 @@
+platform,account_id,account_name,monthly_budget_usd,priority,notes
+meta,123456789012345,Brand Main Meta,75000,1,Primary acquisition account
+meta,234567890123456,Brand Retargeting,25000,2,Bottom-funnel only
+google,1234567890,Brand Google Search,40000,1,Branded + non-branded
+google,2345678901,Brand Google PMax,30000,2,Performance Max - watch quality scores
+tiktok,7012345678901234567,Brand TikTok,20000,1,Spark Ads + UGC

@@ -1,0 +1,65 @@
+{
+  "_comment": "Copy this file to config.json and fill in credentials. NEVER commit the real config.json to git. Add config.json to .gitignore.",
+
+  "meta": {
+    "enabled": true,
+    "access_token": "REPLACE_WITH_META_SYSTEM_USER_TOKEN",
+    "_help": "Generate at developers.facebook.com → Your App → Settings → Advanced → System Users. Required permissions: ads_read, business_management. Long-lived tokens last 60 days; refresh before expiry."
+  },
+
+  "google_ads": {
+    "enabled": true,
+    "developer_token": "REPLACE_WITH_GOOGLE_DEVELOPER_TOKEN",
+    "client_id": "REPLACE_WITH_OAUTH_CLIENT_ID.apps.googleusercontent.com",
+    "client_secret": "REPLACE_WITH_OAUTH_CLIENT_SECRET",
+    "refresh_token": "REPLACE_WITH_REFRESH_TOKEN",
+    "login_customer_id": "REPLACE_WITH_MCC_ID_NO_HYPHENS",
+    "_help": "Developer token from ads.google.com → API Center (24-hour approval). OAuth credentials from Google Cloud Console. Refresh token via OAuth playground using scope https://www.googleapis.com/auth/adwords. Login customer ID = your MCC if you have one (no hyphens)."
+  },
+
+  "tiktok": {
+    "enabled": true,
+    "access_token": "REPLACE_WITH_TIKTOK_LONG_LIVED_TOKEN",
+    "_help": "Generate at ads.tiktok.com/marketing_api → Your App → Auth & Scope. Long-lived token expires after 1 year."
+  },
+
+  "output": {
+    "include_paused_ads": false,
+    "_comment_paused": "Set to true if you want paused ads included in the analysis (useful for fatigue retrospectives, noisy for active diagnosis)",
+
+    "min_impressions_threshold": 1000,
+    "_comment_min_imp": "Ads below this impression count are excluded from fatigue analysis. Lower for low-spend accounts, raise for high-spend.",
+
+    "currency": "USD",
+    "_comment_currency": "All amounts converted to this currency for the unified report. Match your reporting currency."
+  },
+
+  "alerts": {
+    "fail_silently": false,
+    "_comment": "If true, failed platform pulls log errors but the script exits 0. If false (default), any failure exits 1, which surfaces the error to your cron monitoring."
+  },
+
+  "google_ads_write": {
+    "write_access_confirmed": false,
+    "customer_id": "REPLACE_WITH_CUSTOMER_ID_NO_HYPHENS",
+    "developer_token": "REPLACE_WITH_GOOGLE_DEVELOPER_TOKEN",
+    "client_id": "REPLACE_WITH_OAUTH_CLIENT_ID.apps.googleusercontent.com",
+    "client_secret": "REPLACE_WITH_OAUTH_CLIENT_SECRET",
+    "refresh_token": "REPLACE_WITH_REFRESH_TOKEN",
+    "login_customer_id": "REPLACE_WITH_MCC_ID_NO_HYPHENS",
+    "_help": "Deliberately separate from the read-only `google_ads` block above, even though the credential shape is the same — `write_access_confirmed` must be flipped to true by hand before ads_campaign_draft.py will attempt any call here, so read-only setup never silently doubles as write authorization. `customer_id` is which account gets written to; get it wrong and you're creating PAUSED campaigns in the wrong account, so double-check it. See marketing-os-infra/lib/ads_connector.py's module docstring before touching this."
+  },
+
+  "meta_write": {
+    "write_access_confirmed": false,
+    "ad_account_id": "REPLACE_WITH_AD_ACCOUNT_ID_NO_ACT_PREFIX",
+    "access_token": "REPLACE_WITH_META_SYSTEM_USER_TOKEN_WITH_ADS_MANAGEMENT",
+    "page_id": "REPLACE_WITH_FACEBOOK_PAGE_ID",
+    "_help": "Deliberately separate from the read-only `meta` block above — same reasoning as google_ads_write. The access token here needs the `ads_management` permission (the read-only token above only needs `ads_read`); generating a new token with more scope than you've confirmed you want live is exactly the mistake this separate block exists to prevent."
+  },
+
+  "safety": {
+    "max_daily_budget_usd": 20,
+    "_comment": "Hard ceiling ads_connector.py enforces in code on any single draft campaign's daily budget, on top of PAUSED-only. Not about trusting the number in a brief — it's a backstop against a malformed or mistaken brief creating a campaign with an absurd budget, even though it can't spend while paused. Raise it deliberately if a real use case needs a bigger daily budget; don't treat hitting this ceiling as a bug to route around."
+  }
+}

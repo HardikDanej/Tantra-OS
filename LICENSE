@@ -1,0 +1,49 @@
+Tantra Proprietary License
+
+Copyright (c) 2026 Hardik Danej. All rights reserved.
+
+"Tantra" means the Tantra marketing operating system in this repository: its
+agent definitions, skills, knowledge bases, libraries, hooks, tools, workflows,
+templates, documentation and any other material in it, except the third-party
+components listed in the NOTICE file.
+
+1. Ownership. Tantra is owned by Hardik Danej ("the Owner"). No ownership
+   rights are transferred by giving you access to it.
+
+2. What you may do. You may read and use Tantra only if the Owner has given you
+   access, and only for the purpose the Owner agreed to in writing (for example,
+   running it for the Owner's own clients or in a project the Owner approved).
+
+3. What you may not do without the Owner's prior written permission:
+   a. copy, reproduce, publish or redistribute Tantra or any part of it;
+   b. modify it, translate it, or create derivative works based on it
+      (including rewritten or "paraphrased" versions of its agents, skills,
+      prompts or knowledge bases);
+   c. sell, rent, lease, sublicense, host or otherwise make it available to
+      anyone else;
+   d. use it, or any part of it, to train, fine-tune, evaluate or benchmark any
+      machine-learning or AI model, or to build a dataset for that purpose;
+   e. text- or data-mine it, scrape it, or extract its contents in bulk;
+   f. remove, alter or obscure any copyright notice, author or licence
+      information, provenance signature, Content Credentials (C2PA) manifest or
+      "tantra-seal" identifier in it or in anything it produces.
+
+4. Output. Deliverables that Tantra produces for a client belong to whoever the
+   underlying client agreement says they belong to. This licence does not claim
+   them. It does cover Tantra itself as it appears inside any output (for
+   example, copied agent instructions or knowledge-base text).
+
+5. Third-party components. Components listed in NOTICE are licensed under their
+   own terms, which apply to those components instead of this licence.
+
+6. No warranty. Tantra is provided "as is", without any warranty, express or
+   implied, including fitness for a particular purpose. The Owner is not liable
+   for any damage arising from its use, to the extent the law allows.
+
+7. Termination. Any breach of this licence ends your permission to use Tantra
+   immediately. On termination you must stop using it and delete your copies.
+
+Written permission requests: contact Hardik Danej.
+
+This is a plain-English licence written for clarity. It is not legal advice;
+consult a lawyer for questions about your specific situation.

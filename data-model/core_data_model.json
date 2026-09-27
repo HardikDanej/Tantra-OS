@@ -1,0 +1,246 @@
+{
+  "agent_registry_pointer": "taxonomy/marketing_taxonomy.json",
+  "agent_registry_summary": {
+    "counts": {
+      "domain_agent": 21,
+      "sub_agent": 210,
+      "system_infra": 6
+    },
+    "taxonomy_version": "1.0.0"
+  },
+  "counts": {
+    "active": 13,
+    "defined_not_yet_produced": 4
+  },
+  "data_model_version": "1.0.0",
+  "generated_at": "2026-09-06T16:08:59.360714+00:00",
+  "generation_method": "Every schema is grounded in a real, already-existing shape in this repo (a checkpoint entry, an outcomes.jsonl line, a tool_router.py Row class, brand/company.json) -- see each entry's real_producer field. Where no real producer exists yet, status is 'defined_not_yet_produced' and real_producer is null, stated plainly rather than implying a live source. The Agent object is a pointer to taxonomy/marketing_taxonomy.json, not a duplicate of it.",
+  "objects": {
+    "account": {
+      "name": "Account",
+      "purpose": "Company-level prospect/customer context and stakeholders",
+      "real_producer": null,
+      "schema_class": "Account",
+      "status": "defined_not_yet_produced"
+    },
+    "agent": {
+      "name": "Agent",
+      "purpose": "Capability, instructions, permissions, tools, KPIs",
+      "real_producer": "taxonomy/marketing_taxonomy.json via .claude/lib/taxonomy_registry.py -- the real, live Agent Registry. Not redefined here; query that file/script for agent data.",
+      "schema_class": null,
+      "status": "active"
+    },
+    "audience": {
+      "name": "Audience",
+      "purpose": "Segment definition, eligibility, behavior, size",
+      "real_producer": "audience-persona-research-subagent -> brand/personas.json",
+      "schema_class": "Audience",
+      "status": "active"
+    },
+    "brand": {
+      "name": "Brand",
+      "purpose": "Voice, positioning, identity, messaging, approved/prohibited claims",
+      "real_producer": "brand/voice_system.json + brand/icp_definition.md + brand/personas.json (brand-voice-extraction-subagent, core-brand-positioning-subagent) -- a composite of 3 files, each already owned/schemed by its producing sub-agent; not redefined here.",
+      "schema_class": null,
+      "status": "active"
+    },
+    "campaign": {
+      "name": "Campaign",
+      "purpose": "Objective, audience, channels, assets, spend, results",
+      "real_producer": "marketing-os-infra/lib/tool_router.py (AdRow) + marketing-os-infra/lib/ads_connector.py",
+      "schema_class": "AdRow (performance) + ads_connector.CampaignDraftResult (draft)",
+      "status": "active"
+    },
+    "content_asset": {
+      "name": "Content Asset",
+      "purpose": "Brief, format, channel, version, status, performance",
+      "real_producer": null,
+      "schema_class": "ContentAsset",
+      "status": "defined_not_yet_produced"
+    },
+    "customer_contact": {
+      "name": "Customer / Contact",
+      "purpose": "Identity, attributes, behavior, engagement, history",
+      "real_producer": "hubspot_connector.py / marketing-os-infra/04-hubspot-revenue-agent (read-only HubSpot contact properties); no dedicated Pydantic row class exists yet for contacts specifically -- only the deal-side (Opportunity) is currently typed.",
+      "schema_class": null,
+      "status": "active"
+    },
+    "decision": {
+      "name": "Decision",
+      "purpose": "Recommendation/action, evidence, confidence, policy result",
+      "real_producer": "memory/checkpoints.jsonl + memory/approval_gates.jsonl (approval_gate.py) + output_evaluator.py's structural verdict.",
+      "schema_class": "CheckpointRecord + ApprovalGateEvent",
+      "status": "active"
+    },
+    "event": {
+      "name": "Event",
+      "purpose": "Timestamped business or system occurrence",
+      "real_producer": "marketing-os-infra/lib/tool_router.py row schemas + .claude/lib/trigger_registry.py internal condition evaluation.",
+      "schema_class": "AdRow / GSCRow / SurveyResponseRow / ProductEventRow / MediaCoverageRow / SocialProfileSnapshotRow",
+      "status": "active"
+    },
+    "experiment": {
+      "name": "Experiment",
+      "purpose": "Hypothesis, variants, audience, results, evidence",
+      "real_producer": null,
+      "schema_class": "Experiment",
+      "status": "defined_not_yet_produced"
+    },
+    "learning": {
+      "name": "Learning",
+      "purpose": "Observed outcome converted into reusable knowledge",
+      "real_producer": "memory/outcomes.jsonl + .claude/lib/calibration_tracker.py's computed hit-rate stats.",
+      "schema_class": "OutcomeRecord",
+      "status": "active"
+    },
+    "opportunity": {
+      "name": "Opportunity",
+      "purpose": "Pipeline stage, value, probability, sales context",
+      "real_producer": "marketing-os-infra/04-hubspot-revenue-agent/hubspot_historical.py (read-only)",
+      "schema_class": "Opportunity",
+      "status": "active"
+    },
+    "organization": {
+      "name": "Organization",
+      "purpose": "Business identity, goals, markets, policies, constraints",
+      "real_producer": "tools/new_workspace.py -> brand/company.json",
+      "schema_class": "Organization",
+      "status": "active"
+    },
+    "product": {
+      "name": "Product",
+      "purpose": "Product details, pricing, positioning, lifecycle",
+      "real_producer": null,
+      "schema_class": "Product",
+      "status": "defined_not_yet_produced"
+    },
+    "task": {
+      "name": "Task",
+      "purpose": "Atomic action, inputs, output, status, owner",
+      "real_producer": "chief-marketing-orchestrator.md Step 5 dispatch contract, persisted verbatim in a checkpoint's `contracts` array.",
+      "schema_class": "DispatchContract",
+      "status": "active"
+    },
+    "tool": {
+      "name": "Tool",
+      "purpose": "API/action schema, permissions, limits, cost",
+      "real_producer": "marketing-os-infra/lib/*_connector.py -- see TOOL_REGISTRY below, the real catalog this build generates.",
+      "schema_class": "ToolRegistryEntry",
+      "status": "active"
+    },
+    "workflow": {
+      "name": "Workflow",
+      "purpose": "Trigger, states, steps, dependencies, approval rules",
+      "real_producer": "workflows/*.md (4 real named workflows) + .claude/lib/trigger_registry.py (registered condition/cron triggers) -- composite, not a single file.",
+      "schema_class": null,
+      "status": "active"
+    }
+  },
+  "tool_registry": [
+    {
+      "capability": "draft_write",
+      "gated_by": "ad_platform_write",
+      "id": "ads_connector",
+      "module_path": "marketing-os-infra/lib/ads_connector.py",
+      "notes": "Draft-only campaign creation; never launches live.",
+      "platforms": [
+        "Meta",
+        "Google Ads",
+        "TikTok"
+      ],
+      "requires_paid_api": false
+    },
+    {
+      "capability": "draft_write",
+      "gated_by": "PAUSED/draft state, config write_access_confirmed",
+      "id": "cms_connector",
+      "module_path": "marketing-os-infra/lib/cms_connector.py",
+      "notes": "Publishes into a PAUSED/draft state, never live, without confirmation.",
+      "platforms": [
+        "WordPress",
+        "generic CMS"
+      ],
+      "requires_paid_api": false
+    },
+    {
+      "capability": "scoped_write",
+      "gated_by": "config write_access_confirmed",
+      "id": "hubspot_connector",
+      "module_path": "marketing-os-infra/lib/hubspot_connector.py",
+      "notes": "Task/note creation ONLY -- no email sends, no workflow enrollment, no deal-stage or property writes.",
+      "platforms": [
+        "HubSpot"
+      ],
+      "requires_paid_api": true
+    },
+    {
+      "capability": "draft_write",
+      "gated_by": "other_high_stakes (approval_gate.py)",
+      "id": "press_wire_connector",
+      "module_path": "marketing-os-infra/lib/press_wire_connector.py",
+      "notes": "Draft/pending-review only, gated end-to-end like ads_connector.",
+      "platforms": [
+        "press wire services"
+      ],
+      "requires_paid_api": true
+    },
+    {
+      "capability": "read_only",
+      "gated_by": null,
+      "id": "product_analytics_connector",
+      "module_path": "marketing-os-infra/lib/product_analytics_connector.py",
+      "notes": "No write function exists anywhere in the module.",
+      "platforms": [
+        "Amplitude",
+        "Mixpanel"
+      ],
+      "requires_paid_api": true
+    },
+    {
+      "capability": "read_only",
+      "gated_by": null,
+      "id": "media_coverage_connector",
+      "module_path": "marketing-os-infra/lib/media_coverage_connector.py",
+      "notes": "No write function exists anywhere in the module.",
+      "platforms": [
+        "NewsAPI"
+      ],
+      "requires_paid_api": true
+    },
+    {
+      "capability": "read_only",
+      "gated_by": null,
+      "id": "social_profile_connector",
+      "module_path": "marketing-os-infra/lib/social_profile_connector.py",
+      "notes": "No write function exists anywhere in the module.",
+      "platforms": [
+        "Instagram",
+        "LinkedIn"
+      ],
+      "requires_paid_api": true
+    },
+    {
+      "capability": "read_only",
+      "gated_by": null,
+      "id": "survey_platform_connector",
+      "module_path": "marketing-os-infra/lib/survey_platform_connector.py",
+      "notes": "No write function exists anywhere in the module.",
+      "platforms": [
+        "Typeform",
+        "SurveyMonkey"
+      ],
+      "requires_paid_api": true
+    },
+    {
+      "capability": "query_utility",
+      "gated_by": null,
+      "id": "tool_router",
+      "module_path": "marketing-os-infra/lib/tool_router.py",
+      "notes": "Not a connector itself -- the shared PullResult/row-validation framework every puller uses.",
+      "platforms": [
+        "all of the above"
+      ],
+      "requires_paid_api": false
+    }
+  ]
+}

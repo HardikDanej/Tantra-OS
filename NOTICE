@@ -1,0 +1,23 @@
+Tantra marketing operating system
+Copyright (c) 2026 Hardik Danej. All rights reserved.
+Licensed under the Tantra Proprietary License (see LICENSE), except for the
+third-party components below, which keep their own licences.
+
+Third-party components
+----------------------
+
+unlazy (Claude Code skill)
+  Location:  .claude/skills/unlazy/
+  License:   MIT
+  Copyright: Copyright (c) 2026 Leonxlnx
+  Full text: .claude/skills/unlazy/LICENSE
+
+Third-party components are excluded from the owner's provenance seal
+(see provenance/third_party.json) and are never signed as the owner's work.
+
+Generated provenance
+--------------------
+Files under provenance/ (OS manifest, signatures, public verification keys)
+are produced by .claude/lib/provenance.py. Content Credentials in signed
+deliverables disclose AI involvement honestly (IPTC digital source type
+"trainedAlgorithmicMedia").

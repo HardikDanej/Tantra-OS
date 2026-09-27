@@ -1,0 +1,175 @@
+{
+  "confidence_calibration": {
+    "coverage": {
+      "total_outcomes": 2,
+      "unresolvable_checkpoint_ref": 0,
+      "with_matched_prediction": 2,
+      "without_matched_prediction": 0
+    },
+    "flags": [],
+    "min_sample_size": 3,
+    "per_agent_tier": [
+      {
+        "agent": "ads-paid-media-agent",
+        "confidence_tier": "high",
+        "hit_rate": null,
+        "matched": 0,
+        "not_matched": 0,
+        "note": "insufficient data (n=1 < min_sample_size=3) -- not reporting a rate",
+        "partial": 1,
+        "sample_size": 1
+      },
+      {
+        "agent": "seo-agent",
+        "confidence_tier": "high",
+        "hit_rate": null,
+        "matched": 1,
+        "not_matched": 0,
+        "note": "insufficient data (n=1 < min_sample_size=3) -- not reporting a rate",
+        "partial": 0,
+        "sample_size": 1
+      }
+    ],
+    "unresolved_checkpoint_refs": []
+  },
+  "human_approval": {
+    "approval_rate_of_decided": 0.5,
+    "by_stakes_class": {
+      "brand_relaunch": {
+        "rejected": 1
+      },
+      "final_creative": {
+        "pending": 1
+      },
+      "pricing_change": {
+        "approved": 1
+      }
+    },
+    "status_counts": {
+      "approved": 1,
+      "pending": 1,
+      "rejected": 1
+    },
+    "still_pending_gate_ids": [
+      "final_creative_q3"
+    ],
+    "total_gates": 3
+  },
+  "not_computable": [
+    {
+      "metric": "Agent latency and reliability (timing)",
+      "why": "No script logs a dispatch start/end timestamp pair -- checkpoints.jsonl records that a dispatch happened, never how long it took.",
+      "would_need": "Each orchestrator's Step 5/6 would need to record dispatch_started_at/dispatch_completed_at per contract."
+    },
+    {
+      "metric": "Model latency and usage",
+      "why": "This system runs inside Claude Code sessions; no lib script has access to per-call model latency or token usage today.",
+      "would_need": "A logging hook at the model-call boundary itself (outside this repo's current scope)."
+    },
+    {
+      "metric": "Tool latency and errors",
+      "why": "PullResult (tool_router.py) records success/partial/error per source, but not call duration.",
+      "would_need": "A started_at/finished_at pair added to PullResult alongside the existing errors list."
+    },
+    {
+      "metric": "Token/model/tool cost",
+      "why": "No script anywhere in this repo captures token counts or per-call spend.",
+      "would_need": "A cost-tracking layer (this is its own named gap, separate from observability) that logs token/dollar cost per dispatch."
+    },
+    {
+      "metric": "KPI movement after AI interventions",
+      "why": "No script maintains a KPI time series; outcomes.jsonl records a recommendation's real-world result in the user's own words, not a numeric KPI delta.",
+      "would_need": "A structured KPI-value log tied to checkpoint_ref, updated from real reported numbers (never inferred)."
+    },
+    {
+      "metric": "Agent/workflow ROI",
+      "why": "Requires both cost (not tracked) and a numeric business-value figure (not tracked) per dispatch/workflow.",
+      "would_need": "Both of the above, joined."
+    }
+  ],
+  "output_quality": {
+    "by_agent": {
+      "ads-paid-media-agent": {
+        "counts": {
+          "PASS_WITH_FLAGS": 1
+        },
+        "pass_rate": 1.0,
+        "total": 1
+      },
+      "brand-strategy-architecture-agent": {
+        "counts": {
+          "PASS": 1
+        },
+        "pass_rate": 1.0,
+        "total": 1
+      },
+      "seo-agent": {
+        "counts": {
+          "FAIL": 1,
+          "PASS": 1
+        },
+        "pass_rate": 0.5,
+        "total": 2
+      }
+    },
+    "overall_counts": {
+      "FAIL": 1,
+      "PASS": 2,
+      "PASS_WITH_FLAGS": 1
+    },
+    "overall_pass_rate": 0.75,
+    "total_evaluations": 4
+  },
+  "retry_and_escalation": {
+    "cycles": {
+      "creative_brief_9": {
+        "attempts_since_last_resolve": 0,
+        "status": "resolved"
+      },
+      "seo_eeat_article_42": {
+        "attempts_since_last_resolve": 3,
+        "status": "escalated"
+      }
+    },
+    "escalated_cycles": 1,
+    "escalation_rate": 0.5,
+    "max_attempts_cap": 2,
+    "open_within_cap_cycles": 0,
+    "resolved_cycles": 1,
+    "total_cycles": 2
+  },
+  "trigger_activity": {
+    "dangling_unacknowledged_trigger_ids": [
+      "redispatch_cap_check"
+    ],
+    "fires_by_kind": {
+      "condition": 2
+    },
+    "fires_by_trigger_id": {
+      "gate_age_check": 1,
+      "redispatch_cap_check": 1
+    },
+    "total_fires": 2
+  },
+  "workflow_and_dispatch": {
+    "date_range": {
+      "earliest": "2026-08-01T10:00:00Z",
+      "latest": "2026-08-15T10:00:00Z"
+    },
+    "dispatch_kind_distribution": {
+      "diagnostic": 2,
+      "strategic": 2
+    },
+    "dispatch_volume_by_agent": {
+      "ads-paid-media-agent": 1,
+      "brand-strategy-architecture-agent": 1,
+      "seo-agent": 2
+    },
+    "runs_by_system": {
+      "brand-creative-orchestrator": 1,
+      "chief-marketing-orchestrator": 3
+    },
+    "total_runs": 4
+  },
+  "workspace": "observability\\examples\\sample_workspace"
+}

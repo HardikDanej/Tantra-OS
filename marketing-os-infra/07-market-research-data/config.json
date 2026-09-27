@@ -1,0 +1,30 @@
+{
+  "_comment": "Fill in real credentials here. NEVER commit real tokens; add config.json to .gitignore for this workflow.",
+
+  "typeform": {
+    "enabled": true,
+    "api_token": "REPLACE_WITH_TYPEFORM_PERSONAL_ACCESS_TOKEN",
+    "_help": "Typeform → Account settings → Personal tokens. Scope: responses:read only."
+  },
+
+  "surveymonkey": {
+    "enabled": true,
+    "access_token": "REPLACE_WITH_SURVEYMONKEY_OAUTH_TOKEN",
+    "_help": "SurveyMonkey Developer Portal → Create an app → OAuth. Scopes: surveys_read, responses_read_detail only."
+  },
+
+  "amplitude": {
+    "enabled": true,
+    "api_key": "REPLACE_WITH_AMPLITUDE_API_KEY",
+    "secret_key": "REPLACE_WITH_AMPLITUDE_SECRET_KEY",
+    "_help": "Amplitude → Settings → Projects → [project] → General. The Export API is read-only by nature."
+  },
+
+  "mixpanel": {
+    "enabled": true,
+    "service_account_username": "REPLACE_WITH_MIXPANEL_SERVICE_ACCOUNT_USERNAME",
+    "service_account_secret": "REPLACE_WITH_MIXPANEL_SERVICE_ACCOUNT_SECRET",
+    "project_id": "REPLACE_WITH_MIXPANEL_PROJECT_ID",
+    "_help": "Mixpanel → Project Settings → Service Accounts. Create a service account scoped to this project only."
+  }
+}

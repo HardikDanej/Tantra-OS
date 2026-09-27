@@ -1,0 +1,344 @@
+{
+  "version": 1,
+  "generated_at": "2026-09-25T00:00:00Z",
+  "_comment": "Verified 2026-09-25 against vendor sources. Entries older than 60 days are re-verified by the tantra-connect skill before use. <placeholders> in URLs are templates.",
+  "entries": [
+    {
+      "id": "hubspot",
+      "vendor": "HubSpot",
+      "display_name": "HubSpot CRM (remote MCP)",
+      "category": "crm",
+      "transport": "http",
+      "url": "https://mcp.hubspot.com",
+      "auth": "oauth",
+      "read_tools": [
+        "search_crm_objects",
+        "get_crm_objects",
+        "get_properties",
+        "search_owners"
+      ],
+      "write_tools": [
+        "manage_crm_objects",
+        "manage_segment",
+        "manage_custom_properties",
+        "manage_marketing_email"
+      ],
+      "cost_note": "Available to all HubSpot accounts, and the changelog names no tier restriction. AEO features need Marketing Hub Professional/Enterprise. Quote management (beta) needs Revenue Hub Professional/Enterprise. If the account has sensitive data turned on, Activity objects are blocked. No pricing is stated in the fetched docs.",
+      "suggested_agents": [
+        "revenue-crm-agent"
+      ],
+      "sources": [
+        "https://developers.hubspot.com/docs/apps/developer-platform/build-apps/integrate-with-the-remote-hubspot-mcp-server",
+        "https://developers.hubspot.com/changelog/remote-hubspot-mcp-server-is-now-generally-available",
+        "https://developers.hubspot.com/mcp"
+      ],
+      "notes": "OAuth with PKCE via an MCP Auth App created in the HubSpot account. The separate local HubSpot Developer MCP server is for app/CMS development, not CRM data.",
+      "verified_at": "2026-09-25",
+      "official": true,
+      "tools_complete": false
+    },
+    {
+      "id": "salesforce",
+      "vendor": "Salesforce",
+      "display_name": "Salesforce Hosted MCP (SObject All)",
+      "category": "crm",
+      "transport": "http",
+      "url": "https://api.salesforce.com/platform/mcp/v1/platform/sobject-all",
+      "auth": "oauth",
+      "read_tools": [
+        "soqlQuery",
+        "find",
+        "getObjectSchema",
+        "getUserInfo"
+      ],
+      "write_tools": [
+        "createSobjectRecord",
+        "updateSobjectRecord",
+        "updateRelatedRecord",
+        "deleteSobjectRecord"
+      ],
+      "cost_note": "Available to Enterprise Edition orgs and above. Setting up the External Client App needs System Administrator or equivalent permissions. The pages I read give no price or add-on charge.",
+      "suggested_agents": [
+        "revenue-crm-agent"
+      ],
+      "sources": [
+        "https://developer.salesforce.com/docs/platform/hosted-mcp-servers/guide/hosted-mcp-servers-overview.html",
+        "https://developer.salesforce.com/docs/platform/hosted-mcp-servers/references/reference/sobject-all.html",
+        "https://developer.salesforce.com/docs/platform/hosted-mcp-servers/guide/claude.html",
+        "https://developer.salesforce.com/docs/platform/hosted-mcp-servers/guide/client-connection-overview.html"
+      ],
+      "notes": "One of several standard hosted servers, each with its own endpoint. An admin registers an External Client App (mcp_api + refresh_token scopes).",
+      "verified_at": "2026-09-25",
+      "official": true,
+      "tools_complete": false
+    },
+    {
+      "id": "zoho-crm",
+      "vendor": "Zoho",
+      "display_name": "Zoho CRM (Data Operations MCP)",
+      "category": "crm",
+      "transport": "http",
+      "url": "https://zoho-crm-data-operations-60065097786.zohomcp.in/mcp/fe46ddbc48fec3713c8754cea8ec9ac5/message",
+      "auth": "oauth",
+      "read_tools": [],
+      "write_tools": [],
+      "cost_note": "No separate pricing stated. \"API calls executed through MCP consume API credits in the same way as standard API calls\" and are subject to existing API credit limits. Requires a Zoho CRM account with appropriate user permissions; no specific edition requirement documented.",
+      "suggested_agents": [
+        "revenue-crm-agent"
+      ],
+      "sources": [
+        "https://www.zoho.com/crm/developer/docs/mcp/overview.html",
+        "https://www.zoho.com/crm/developer/docs/mcp/setup/claude.html",
+        "https://www.zoho.com/crm/developer/docs/mcp/setup/vscode.html",
+        "https://www.zoho.com/crm/developer/mcp.html"
+      ],
+      "notes": "Zoho publishes four servers (Data Insights is read-only; Data Operations, Module Customization and Workflow can write). Endpoint paths are server-specific: copy the current one from Zoho's docs. Tool IDs not verified; list them after connecting and classify each before approval.",
+      "verified_at": "2026-09-25",
+      "official": true,
+      "tools_complete": false
+    },
+    {
+      "id": "dynamics-365-dataverse",
+      "vendor": "Microsoft",
+      "display_name": "Dynamics 365 / Dataverse MCP",
+      "category": "crm",
+      "transport": "http",
+      "url": "https://<your-org-url>/api/mcp",
+      "auth": "oauth",
+      "read_tools": [],
+      "write_tools": [],
+      "cost_note": "Dataverse: an admin must turn on the MCP server for the environment and allow the client; the local proxy needs Node.js 18+ and one-time tenant admin consent. Sales MCP: admin permissions in Sales and in Copilot Studio, plus enough Copilot Studio credits to cover the tool calls. ERP MCP: F&O version 10.0.47, 10.0.46 PQU-2 or 10.0.45 PQU-7; a Tier 2+ or Unified Developer Environment (not supported on Cloud Hosted Environments); the client listed in Allowed MCP Clients. ERP billing for clients other than Copilot Studio: \"0.1 Copilot Credits per tool call\" (one credit per 10 calls). Users with Finance Premium or SCM Premium licenses are exempt from that charge. The older static ERP MCP server retires on October 1, 2026. A search snippet also says Dataverse MCP calls from outside Copilot Studio are metered in Copilot credits since Dec 15, 2025. I didn't confirm that on a Microsoft page.",
+      "suggested_agents": [
+        "revenue-crm-agent"
+      ],
+      "sources": [
+        "https://learn.microsoft.com/en-us/power-apps/maker/data-platform/data-platform-mcp-other-clients",
+        "https://learn.microsoft.com/en-us/dynamics365/customer-service/administer/configure-customer-service-mcp-server",
+        "https://learn.microsoft.com/en-us/dynamics365/sales/connect-agents-to-model-context-protocol",
+        "https://learn.microsoft.com/en-us/dynamics365/fin-ops-core/dev-itpro/copilot/copilot-mcp"
+      ],
+      "notes": "URL is a per-environment TEMPLATE (replace <your-org-url>). Microsoft ships separate servers for Dataverse, Sales, Customer Service and ERP (Finance & Operations). An admin must enable the server. Tool IDs vary by server; classify after connecting.",
+      "verified_at": "2026-09-25",
+      "official": true,
+      "tools_complete": false
+    },
+    {
+      "id": "netsuite",
+      "vendor": "Oracle",
+      "display_name": "NetSuite AI Connector (MCP Standard Tools)",
+      "category": "erp",
+      "transport": "http",
+      "url": "https://<accountid>.suitetalk.api.netsuite.com/services/mcp/v1/suiteapp/com.netsuite.mcpstandardtools",
+      "auth": "oauth",
+      "read_tools": [
+        "ns_getRecord",
+        "ns_runSavedSearch",
+        "ns_runReport",
+        "ns_listAllReports"
+      ],
+      "write_tools": [
+        "ns_createRecord",
+        "ns_updateRecord"
+      ],
+      "cost_note": "Per the FAQ, the AI Connector Service is not a paid feature and MCP Standard Tools is a free SuiteApp, but the AI client may need a paid subscription (the FAQ lists Claude Pro and higher). You must install the MCP Standard Tools SuiteApp and enable the features and permissions above, and you must use a non-administrator role. Execution logs are kept for 21 days in production and 7 days in sandbox. HIPAA compliance has not been assessed, so do not use it with ePHI.",
+      "suggested_agents": [
+        "marketing-analytics-attribution-modeling-agent"
+      ],
+      "sources": [
+        "https://docs.oracle.com/en/cloud/saas/netsuite/ns-online-help/section_0714082142.html",
+        "https://docs.oracle.com/en/cloud/saas/netsuite/ns-online-help/article_7200233106.html",
+        "https://docs.oracle.com/en/cloud/saas/netsuite/ns-online-help/article_143403258.html",
+        "https://docs.oracle.com/en/cloud/saas/netsuite/ns-online-help/article_0902023508.html"
+      ],
+      "notes": "URL is a TEMPLATE: replace <accountid>. Install the free MCP Standard Tools SuiteApp first.",
+      "verified_at": "2026-09-25",
+      "official": true,
+      "tools_complete": false
+    },
+    {
+      "id": "sap-btp-admin",
+      "vendor": "SAP",
+      "display_name": "SAP BTP Administration MCP",
+      "category": "erp",
+      "transport": "http",
+      "url": "https://sso.mcp.btp.cloud.sap/mcp",
+      "auth": "oauth",
+      "read_tools": [],
+      "write_tools": [],
+      "cost_note": "You need an MCP-compatible client (the docs name Claude Code) and access to an SAP BTP global account. SAP says there is nothing to host or deploy: you just register the remote endpoint. I found no pricing statement.",
+      "sources": [
+        "https://help.sap.com/docs/btp/sap-business-technology-platform/connect-to-mcp-server-for-sap-btp-administration",
+        "https://help.sap.com/docs/BTP/65de2977205c403bbc107264b8eccf4b/26262f3937c14283a21c36a1cafc7039.html?locale=en-US&state=PRODUCTION&version=Cloud",
+        "https://help.sap.com/docs/BTP/65de2977205c403bbc107264b8eccf4b/2d167cbbcec4417486d4f3fdfffa58e1.html?locale=en-US&state=PRODUCTION&version=Cloud",
+        "https://community.sap.com/t5/technology-blog-posts-by-sap/public-release-of-the-mcp-server-for-sap-btp-administration/ba-p/14471692"
+      ],
+      "notes": "Covers SAP BTP account administration ONLY, not S/4HANA business data. SAP has no official prebuilt S/4HANA data MCP server; community servers are not SAP-published. Listed so nobody mistakes it for an S/4HANA connector.",
+      "verified_at": "2026-09-25",
+      "official": true,
+      "tools_complete": false
+    },
+    {
+      "id": "odoo",
+      "vendor": "Odoo",
+      "display_name": "Odoo MCP server (next release)",
+      "category": "erp",
+      "transport": "http",
+      "url": "https://<your-database>.odoo.com/mcp",
+      "auth": "header_token",
+      "env_vars": [
+        "ODOO_API_KEY"
+      ],
+      "headers": {
+        "Authorization": "Bearer ${ODOO_API_KEY}"
+      },
+      "read_tools": [],
+      "write_tools": [],
+      "cost_note": "No pricing or edition/plan statement in the docs. Requirements: an Odoo database with the AI app / MCP feature (master version), a user API key, developer mode to expose extra server actions as tools, and Node.js plus an MCP client.",
+      "sources": [
+        "https://www.odoo.com/documentation/master/applications/productivity/ai/mcp_server.html",
+        "https://www.odoo.com/documentation/19.0/applications/productivity/ai/mcp_server.html (404)"
+      ],
+      "notes": "Documented only in Odoo 'master' (unreleased) docs; the 19.0 page returns 404, so check your version. URL is a per-database TEMPLATE. Tools are generic AI tools plus any server actions you expose.",
+      "verified_at": "2026-09-25",
+      "official": true,
+      "tools_complete": false
+    },
+    {
+      "id": "shopify-dev",
+      "vendor": "Shopify",
+      "display_name": "Shopify Dev MCP (docs and schema)",
+      "category": "commerce",
+      "transport": "stdio",
+      "command": "npx",
+      "package": "@shopify/dev-mcp@1.15.4",
+      "auth": "none",
+      "read_tools": [],
+      "write_tools": [],
+      "cost_note": "Free local npm package; no pricing statement found. Needs Node/npx. Store-management tasks need Shopify CLI authenticated to a store. No plan or tier requirement is documented.",
+      "sources": [
+        "https://shopify.dev/docs/apps/build/ai-toolkit",
+        "https://shopify.dev/docs/apps/build/devmcp (redirects to https://shopify.dev/docs/apps/build/ai-toolkit)",
+        "https://shopify.dev/docs/apps/build/storefront-mcp"
+      ],
+      "notes": "Developer server: docs/schema search and code validation, NOT store Admin data. Pinned to the npm release current on verified_at; re-check before connecting.",
+      "verified_at": "2026-09-25",
+      "official": true,
+      "tools_complete": false
+    },
+    {
+      "id": "notion",
+      "vendor": "Notion",
+      "display_name": "Notion (remote MCP)",
+      "category": "docs-knowledge",
+      "transport": "http",
+      "url": "https://mcp.notion.com/mcp",
+      "auth": "oauth",
+      "read_tools": [
+        "notion-search",
+        "notion-fetch",
+        "notion-query-data-sources",
+        "notion-get-comments"
+      ],
+      "write_tools": [
+        "notion-create-pages",
+        "notion-update-page",
+        "notion-create-database",
+        "notion-move-pages"
+      ],
+      "cost_note": "No pricing statement found in the MCP docs. The supported-tools page says most tools work on all plans. notion-query-meeting-notes and the Custom Agent/session tools need Notion AI. Advanced search filters and date sorting need a Business or Enterprise plan.",
+      "sources": [
+        "https://developers.notion.com/guides/mcp/get-started-with-mcp",
+        "https://developers.notion.com/docs/mcp",
+        "https://developers.notion.com/guides/mcp/overview.md",
+        "https://developers.notion.com/guides/mcp/get-started-with-mcp.md"
+      ],
+      "notes": "Streamable HTTP recommended; SSE fallback at https://mcp.notion.com/sse.",
+      "verified_at": "2026-09-25",
+      "official": true,
+      "tools_complete": false
+    },
+    {
+      "id": "slack",
+      "vendor": "Slack",
+      "display_name": "Slack (remote MCP)",
+      "category": "communication",
+      "transport": "http",
+      "url": "https://mcp.slack.com/mcp",
+      "auth": "oauth",
+      "read_tools": [],
+      "write_tools": [],
+      "cost_note": "The docs name no specific Slack plan and give no pricing. Workspace admins approve MCP client integrations. The client must be a Slack app published in the directory or an internal app. Each tool has a per-tool rate limit (Tier 2, 3 or 4); search and send message have their own special limits.",
+      "sources": [
+        "https://docs.slack.dev/ai/slack-mcp-server/",
+        "https://slack.com/help/articles/48855576908307-Guide-to-Model-Context-Protocol-in-Slack"
+      ],
+      "notes": "Workspace admin must approve the MCP client. Capabilities include search/read and send message, canvases, file upload; exact tool IDs not verified, so classify each after connecting.",
+      "verified_at": "2026-09-25",
+      "official": true,
+      "tools_complete": false
+    },
+    {
+      "id": "google-analytics",
+      "vendor": "Google",
+      "display_name": "Google Analytics MCP (experimental)",
+      "category": "analytics",
+      "transport": "stdio",
+      "command": "pipx",
+      "package": "analytics-mcp==0.7.0",
+      "auth": "env_token",
+      "read_tools": [
+        "get_account_summaries",
+        "get_property_details",
+        "list_google_ads_links",
+        "run_report"
+      ],
+      "write_tools": [],
+      "cost_note": "Python 3.10+ with pipx. Needs a Google Cloud project with the Analytics Admin and Data APIs enabled, and a user with access to the GA4 property. No pricing is stated. The server is Apache-2.0 open source, and normal GA API quotas apply.",
+      "suggested_agents": [
+        "marketing-analytics-attribution-modeling-agent",
+        "seo-agent"
+      ],
+      "sources": [
+        "https://developers.google.com/analytics/devguides/MCP",
+        "https://github.com/googleanalytics/google-analytics-mcp",
+        "https://pypi.org/project/analytics-mcp/"
+      ],
+      "notes": "Local, read-only, marked Experimental. Auth is Google Application Default Credentials (analytics.readonly scope), not a pasted token. Run as `pipx run analytics-mcp==0.7.0`.",
+      "verified_at": "2026-09-25",
+      "official": true,
+      "tools_complete": false
+    },
+    {
+      "id": "webflow",
+      "vendor": "Webflow",
+      "display_name": "Webflow (remote MCP)",
+      "category": "cms",
+      "transport": "http",
+      "url": "https://mcp.webflow.com/mcp",
+      "auth": "oauth",
+      "read_tools": [],
+      "write_tools": [
+        "data_sites_tool",
+        "data_cms_tool",
+        "data_pages_tool",
+        "designer_tool",
+        "data_element_builder"
+      ],
+      "cost_note": "Needs an active Webflow account with sites you can access, plus OAuth authorization. The docs give no price for the MCP server itself. Analytics tools need Webflow Analyze, described as \"an optional add-on available on paid Site plans\".",
+      "suggested_agents": [
+        "website-development-agent",
+        "seo-agent"
+      ],
+      "sources": [
+        "https://developers.webflow.com/mcp/installing/claude-code",
+        "https://developers.webflow.com/mcp/reference/getting-started",
+        "https://developers.webflow.com/mcp/reference/overview",
+        "https://github.com/webflow/mcp-server"
+      ],
+      "notes": "Webflow tools are multi-action (one tool both reads and writes), so all are classified as write; a read-only Webflow connection is not possible at tool granularity. Separate docs-only server at https://developers.webflow.com/_mcp/server.",
+      "verified_at": "2026-09-25",
+      "official": true,
+      "tools_complete": false
+    }
+  ]
+}

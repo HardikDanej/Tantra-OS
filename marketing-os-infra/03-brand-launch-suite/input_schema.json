@@ -1,0 +1,126 @@
+{
+  "_comment": "JSON Schema describing the structure of brand_inputs.json produced by asset_ingestion.py. The chat workflow reads this schema to understand what's available.",
+
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "Brand Inputs",
+  "type": "object",
+  "required": ["ingestion_metadata", "assets"],
+
+  "properties": {
+    "ingestion_metadata": {
+      "type": "object",
+      "required": ["generated_at", "total_assets"],
+      "properties": {
+        "generated_at": {
+          "type": "string",
+          "format": "date-time",
+          "description": "ISO 8601 timestamp of ingestion run"
+        },
+        "total_assets": {
+          "type": "integer",
+          "description": "Total number of assets ingested"
+        },
+        "total_words": {
+          "type": "integer",
+          "description": "Aggregate word count across all assets"
+        },
+        "asset_count_by_category": {
+          "type": "object",
+          "description": "Asset counts per category (interviews, web, social, customer, prior_brand, competitive)"
+        },
+        "asset_count_by_format": {
+          "type": "object",
+          "description": "Asset counts per file format"
+        }
+      }
+    },
+
+    "assets": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": ["id", "category", "filename", "format", "content"],
+        "properties": {
+          "id": {
+            "type": "string",
+            "description": "Stable identifier, e.g. interviews_001"
+          },
+          "category": {
+            "type": "string",
+            "enum": ["interviews", "web", "social", "customer", "prior_brand", "competitive"],
+            "description": "Source category — determines how the chat workflow weights the asset"
+          },
+          "filename": {
+            "type": "string",
+            "description": "Original filename for reference"
+          },
+          "format": {
+            "type": "string",
+            "enum": ["pdf", "docx", "html", "markdown", "text", "csv", "audio"],
+            "description": "Source format. Audio sources (Whisper transcripts) are flagged so voice-extractor can weight them appropriately for spoken vs. written voice."
+          },
+          "extracted_at": {
+            "type": "string",
+            "format": "date-time"
+          },
+          "word_count": {
+            "type": "integer"
+          },
+          "content_hash": {
+            "type": "string",
+            "description": "SHA-256 truncated to 16 chars — used to detect re-ingestion of unchanged files"
+          },
+          "content": {
+            "type": "string",
+            "description": "The extracted text content"
+          },
+          "metadata": {
+            "type": "object",
+            "description": "Format-specific metadata (page count for PDFs, language for audio, columns for CSVs, etc.)"
+          }
+        }
+      }
+    }
+  },
+
+  "_category_weights_for_chat_workflow": {
+    "_comment": "Reference for how the chat skills should weight different categories. Not enforced by schema, but documented here for skill calibration.",
+
+    "interviews": {
+      "weight_for_voice_extraction": "highest",
+      "weight_for_audit": "high",
+      "weight_for_personas": "low",
+      "rationale": "Founder/exec interviews carry the most authentic voice signal. They reveal what the brand IS, not what marketing wants it to be."
+    },
+    "customer": {
+      "weight_for_voice_extraction": "low",
+      "weight_for_audit": "medium",
+      "weight_for_personas": "highest",
+      "rationale": "Customer testimonials, support transcripts, and reviews are the primary persona evidence base. Real customer language beats invented personas every time."
+    },
+    "web": {
+      "weight_for_voice_extraction": "medium",
+      "weight_for_audit": "highest",
+      "weight_for_personas": "low",
+      "rationale": "Web copy reveals the brand's current public positioning. Heavily weighted for audit (what is the brand currently signaling?) but less for voice (often committee-edited and AI-templated)."
+    },
+    "social": {
+      "weight_for_voice_extraction": "high",
+      "weight_for_audit": "medium",
+      "weight_for_personas": "medium",
+      "rationale": "Social posts (especially founder LinkedIn) carry stronger voice signal than web copy because they're typically less filtered."
+    },
+    "prior_brand": {
+      "weight_for_voice_extraction": "medium",
+      "weight_for_audit": "high",
+      "weight_for_personas": "low",
+      "rationale": "Prior brand books reveal stated intent. The audit compares stated intent (this category) against demonstrated reality (web/social) — the gap is usually the most actionable insight."
+    },
+    "competitive": {
+      "weight_for_voice_extraction": "none",
+      "weight_for_audit": "high",
+      "weight_for_personas": "low",
+      "rationale": "Competitive material is reference for category convention analysis only. Never weight competitor voice in your voice extraction — that's how brands accidentally start sounding like their competitors."
+    }
+  }
+}

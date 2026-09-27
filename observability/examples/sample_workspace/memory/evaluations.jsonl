@@ -1,0 +1,4 @@
+{"timestamp": "2026-08-01T10:05:00Z", "agent": "seo-agent", "dispatch_kind": "diagnostic", "required_shape": ["OUTPUT","CONFIDENCE","GAPS"], "verdict": "PASS", "hard_failures": [], "flags": [], "checks": []}
+{"timestamp": "2026-08-05T10:05:00Z", "agent": "ads-paid-media-agent", "dispatch_kind": "diagnostic", "required_shape": ["OUTPUT","CONFIDENCE","GAPS"], "verdict": "PASS_WITH_FLAGS", "hard_failures": [], "flags": ["low confidence with empty gaps"], "checks": []}
+{"timestamp": "2026-08-10T10:05:00Z", "agent": "seo-agent", "dispatch_kind": "strategic", "required_shape": ["OPTION_A","OPTION_B","GAPS"], "verdict": "FAIL", "hard_failures": ["options 90% similar"], "flags": [], "checks": []}
+{"timestamp": "2026-08-15T10:05:00Z", "agent": "brand-strategy-architecture-agent", "dispatch_kind": "strategic", "required_shape": ["OPTION_A","OPTION_B","GAPS"], "verdict": "PASS", "hard_failures": [], "flags": [], "checks": []}

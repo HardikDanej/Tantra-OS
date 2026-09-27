@@ -1,0 +1,3448 @@
+{
+  "agent_count": 238,
+  "agents": {
+    "ab-multivariate-testing-subagent": {
+      "children": [],
+      "contract_fields": [
+        "CONFIDENCE",
+        "GAPS"
+      ],
+      "has_agent_tool": false,
+      "parents": [
+        "growth-ops-cro-agent"
+      ],
+      "system": "digital-marketing-growth",
+      "tier": "sub"
+    },
+    "accessibility-wcag-auditing-subagent": {
+      "children": [],
+      "contract_fields": [
+        "CONFIDENCE",
+        "CITATION_CHECK",
+        "GAPS"
+      ],
+      "has_agent_tool": false,
+      "parents": [
+        "website-development-agent"
+      ],
+      "system": "digital-marketing-growth",
+      "tier": "sub"
+    },
+    "ads-paid-media-agent": {
+      "children": [
+        "affiliate-partnerships-subagent",
+        "bid-strategy-smart-bidding-governance-subagent",
+        "ctv-ott-subagent",
+        "dooh-programmatic-subagent",
+        "native-sponsored-content-subagent",
+        "paid-social-subagent",
+        "programmatic-display-dsp-subagent",
+        "retail-media-subagent",
+        "retargeting-dynamic-remarketing-subagent",
+        "sem-paid-search-subagent"
+      ],
+      "contract_fields": [
+        "CONFIDENCE",
+        "CITATION_CHECK",
+        "GAPS"
+      ],
+      "has_agent_tool": true,
+      "parents": [
+        "chief-marketing-orchestrator"
+      ],
+      "system": "digital-marketing-growth",
+      "tier": "domain"
+    },
+    "aeo-geo-subagent": {
+      "children": [],
+      "contract_fields": [
+        "CONFIDENCE",
+        "CITATION_CHECK",
+        "GAPS"
+      ],
+      "has_agent_tool": false,
+      "parents": [
+        "seo-agent"
+      ],
+      "system": "digital-marketing-growth",
+      "tier": "sub"
+    },
+    "affiliate-partnerships-subagent": {
+      "children": [],
+      "contract_fields": [
+        "CONFIDENCE",
+        "CITATION_CHECK",
+        "GAPS"
+      ],
+      "has_agent_tool": false,
+      "parents": [
+        "ads-paid-media-agent"
+      ],
+      "system": "digital-marketing-growth",
+      "tier": "sub"
+    },
+    "aso-subagent": {
+      "children": [],
+      "contract_fields": [
+        "CONFIDENCE",
+        "CITATION_CHECK",
+        "GAPS"
+      ],
+      "has_agent_tool": false,
+      "parents": [
+        "seo-agent"
+      ],
+      "system": "digital-marketing-growth",
+      "tier": "sub"
+    },
+    "audience-persona-research-subagent": {
+      "children": [],
+      "contract_fields": [
+        "CONFIDENCE",
+        "CITATION_CHECK",
+        "GAPS"
+      ],
+      "has_agent_tool": false,
+      "parents": [
+        "marketing-strategist-agent"
+      ],
+      "system": "digital-marketing-growth",
+      "tier": "sub"
+    },
+    "audio-strategy-podcasting-subagent": {
+      "children": [],
+      "contract_fields": [
+        "CONFIDENCE",
+        "GAPS"
+      ],
+      "has_agent_tool": false,
+      "parents": [
+        "content-marketing-editorial-strategy-agent"
+      ],
+      "system": "brand-creative",
+      "tier": "sub"
+    },
+    "beta-testing-early-access-subagent": {
+      "children": [],
+      "contract_fields": [
+        "CONFIDENCE",
+        "GAPS"
+      ],
+      "has_agent_tool": false,
+      "parents": [
+        "go-to-market-launch-strategy-agent"
+      ],
+      "system": "product-marketing-gtm",
+      "tier": "sub"
+    },
+    "bid-strategy-smart-bidding-governance-subagent": {
+      "children": [],
+      "contract_fields": [
+        "CONFIDENCE",
+        "GAPS"
+      ],
+      "has_agent_tool": false,
+      "parents": [
+        "ads-paid-media-agent"
+      ],
+      "system": "digital-marketing-growth",
+      "tier": "sub"
+    },
+    "booth-architecture-spatial-design-vendor-ops-subagent": {
+      "children": [],
+      "contract_fields": [
+        "CONFIDENCE",
+        "GAPS"
+      ],
+      "has_agent_tool": false,
+      "parents": [
+        "events-experiential-marketing-agent"
+      ],
+      "system": "pr-corporate-comms",
+      "tier": "sub"
+    },
+    "brand-ambassador-advocate-program-subagent": {
+      "children": [],
+      "contract_fields": [
+        "CONFIDENCE",
+        "GAPS"
+      ],
+      "has_agent_tool": false,
+      "parents": [
+        "organic-social-community-building-agent"
+      ],
+      "system": "brand-creative",
+      "tier": "sub"
+    },
+    "brand-architecture-strategy-subagent": {
+      "children": [],
+      "contract_fields": [
+        "CONFIDENCE",
+        "CITATION_CHECK",
+        "GAPS"
+      ],
+      "has_agent_tool": false,
+      "parents": [
+        "brand-strategy-architecture-agent"
+      ],
+      "system": "brand-creative",
+      "tier": "sub"
+    },
+    "brand-asset-audit-subagent": {
+      "children": [],
+      "contract_fields": [
+        "CONFIDENCE",
+        "CITATION_CHECK",
+        "GAPS"
+      ],
+      "has_agent_tool": false,
+      "parents": [
+        "marketing-strategist-agent"
+      ],
+      "system": "digital-marketing-growth",
+      "tier": "sub"
+    },
+    "brand-creative-orchestrator": {
+      "children": [
+        "brand-strategy-architecture-agent",
+        "content-marketing-editorial-strategy-agent",
+        "cross-system-dispatch-bridge",
+        "organic-social-community-building-agent"
+      ],
+      "contract_fields": [],
+      "has_agent_tool": true,
+      "parents": [
+        "main",
+        "cross-system-dispatch-bridge"
+      ],
+      "system": "brand-creative",
+      "tier": "entry"
+    },
+    "brand-equity-health-tracking-subagent": {
+      "children": [],
+      "contract_fields": [
+        "CONFIDENCE",
+        "CITATION_CHECK",
+        "GAPS"
+      ],
+      "has_agent_tool": false,
+      "parents": [
+        "brand-strategy-architecture-agent"
+      ],
+      "system": "brand-creative",
+      "tier": "sub"
+    },
+    "brand-identity-systems-subagent": {
+      "children": [],
+      "contract_fields": [
+        "CONFIDENCE",
+        "GAPS"
+      ],
+      "has_agent_tool": false,
+      "parents": [
+        "brand-strategy-architecture-agent"
+      ],
+      "system": "brand-creative",
+      "tier": "sub"
+    },
+    "brand-purpose-values-subagent": {
+      "children": [],
+      "contract_fields": [
+        "CONFIDENCE",
+        "GAPS"
+      ],
+      "has_agent_tool": false,
+      "parents": [
+        "brand-strategy-architecture-agent"
+      ],
+      "system": "brand-creative",
+      "tier": "sub"
+    },
+    "brand-strategy-architecture-agent": {
+      "children": [
+        "brand-architecture-strategy-subagent",
+        "brand-equity-health-tracking-subagent",
+        "brand-identity-systems-subagent",
+        "brand-purpose-values-subagent",
+        "brand-verbal-identity-subagent",
+        "co-branding-partnerships-subagent",
+        "competitive-differentiation-category-creation-subagent",
+        "core-brand-positioning-subagent",
+        "rebranding-evolution-subagent",
+        "trademark-ip-governance-subagent"
+      ],
+      "contract_fields": [
+        "CONFIDENCE",
+        "GAPS"
+      ],
+      "has_agent_tool": true,
+      "parents": [
+        "brand-creative-orchestrator"
+      ],
+      "system": "brand-creative",
+      "tier": "domain"
+    },
+    "brand-trust-counter-strategy-subagent": {
+      "children": [],
+      "contract_fields": [
+        "CONFIDENCE",
+        "CITATION_CHECK",
+        "GAPS"
+      ],
+      "has_agent_tool": false,
+      "parents": [
+        "competitor-red-team-agent"
+      ],
+      "system": "digital-marketing-growth",
+      "tier": "sub"
+    },
+    "brand-verbal-identity-subagent": {
+      "children": [],
+      "contract_fields": [
+        "CONFIDENCE",
+        "GAPS"
+      ],
+      "has_agent_tool": false,
+      "parents": [
+        "brand-strategy-architecture-agent"
+      ],
+      "system": "brand-creative",
+      "tier": "sub"
+    },
+    "brand-voice-extraction-subagent": {
+      "children": [],
+      "contract_fields": [
+        "CONFIDENCE",
+        "GAPS"
+      ],
+      "has_agent_tool": false,
+      "parents": [
+        "marketing-strategist-agent"
+      ],
+      "system": "digital-marketing-growth",
+      "tier": "sub"
+    },
+    "broken-link-dead-page-scanning-subagent": {
+      "children": [],
+      "contract_fields": [
+        "CONFIDENCE",
+        "CITATION_CHECK",
+        "GAPS"
+      ],
+      "has_agent_tool": false,
+      "parents": [
+        "website-development-agent"
+      ],
+      "system": "digital-marketing-growth",
+      "tier": "sub"
+    },
+    "buyer-journey-collateral-mapping-subagent": {
+      "children": [],
+      "contract_fields": [
+        "CONFIDENCE",
+        "GAPS"
+      ],
+      "has_agent_tool": false,
+      "parents": [
+        "commercial-assets-sales-enablement-agent"
+      ],
+      "system": "product-marketing-gtm",
+      "tier": "sub"
+    },
+    "cac-payback-analysis-subagent": {
+      "children": [],
+      "contract_fields": [
+        "CONFIDENCE",
+        "GAPS"
+      ],
+      "has_agent_tool": false,
+      "parents": [
+        "marketing-analytics-attribution-modeling-agent"
+      ],
+      "system": "market-research",
+      "tier": "sub"
+    },
+    "case-study-social-proof-subagent": {
+      "children": [],
+      "contract_fields": [
+        "CONFIDENCE",
+        "GAPS"
+      ],
+      "has_agent_tool": false,
+      "parents": [
+        "writing-content-production-agent"
+      ],
+      "system": "digital-marketing-growth",
+      "tier": "sub"
+    },
+    "case-study-storytelling-strategy-subagent": {
+      "children": [],
+      "contract_fields": [
+        "CONFIDENCE",
+        "GAPS"
+      ],
+      "has_agent_tool": false,
+      "parents": [
+        "content-marketing-editorial-strategy-agent"
+      ],
+      "system": "brand-creative",
+      "tier": "sub"
+    },
+    "channel-distribution-counter-strategy-subagent": {
+      "children": [],
+      "contract_fields": [
+        "CONFIDENCE",
+        "CITATION_CHECK",
+        "GAPS"
+      ],
+      "has_agent_tool": false,
+      "parents": [
+        "competitor-red-team-agent"
+      ],
+      "system": "digital-marketing-growth",
+      "tier": "sub"
+    },
+    "checkout-cart-abandonment-subagent": {
+      "children": [],
+      "contract_fields": [
+        "CONFIDENCE",
+        "GAPS"
+      ],
+      "has_agent_tool": false,
+      "parents": [
+        "growth-ops-cro-agent"
+      ],
+      "system": "digital-marketing-growth",
+      "tier": "sub"
+    },
+    "chief-marketing-orchestrator": {
+      "children": [
+        "ads-paid-media-agent",
+        "competitor-red-team-agent",
+        "cross-system-dispatch-bridge",
+        "growth-ops-cro-agent",
+        "marketing-strategist-agent",
+        "revenue-crm-agent",
+        "seo-agent",
+        "social-media-agent",
+        "website-development-agent",
+        "writing-content-production-agent"
+      ],
+      "contract_fields": [],
+      "has_agent_tool": true,
+      "parents": [
+        "main",
+        "cross-system-dispatch-bridge"
+      ],
+      "system": "digital-marketing-growth",
+      "tier": "entry"
+    },
+    "churn-prediction-winback-subagent": {
+      "children": [],
+      "contract_fields": [
+        "CONFIDENCE",
+        "GAPS"
+      ],
+      "has_agent_tool": false,
+      "parents": [
+        "revenue-crm-agent"
+      ],
+      "system": "digital-marketing-growth",
+      "tier": "sub"
+    },
+    "churn-root-cause-winback-offer-modeling-subagent": {
+      "children": [],
+      "contract_fields": [
+        "CONFIDENCE",
+        "GAPS"
+      ],
+      "has_agent_tool": false,
+      "parents": [
+        "pricing-packaging-customer-adoption-agent"
+      ],
+      "system": "product-marketing-gtm",
+      "tier": "sub"
+    },
+    "clv-ltv-modeling-subagent": {
+      "children": [],
+      "contract_fields": [
+        "CONFIDENCE",
+        "GAPS"
+      ],
+      "has_agent_tool": false,
+      "parents": [
+        "marketing-analytics-attribution-modeling-agent"
+      ],
+      "system": "market-research",
+      "tier": "sub"
+    },
+    "co-branding-partnerships-subagent": {
+      "children": [],
+      "contract_fields": [
+        "CONFIDENCE",
+        "CITATION_CHECK",
+        "GAPS"
+      ],
+      "has_agent_tool": false,
+      "parents": [
+        "brand-strategy-architecture-agent"
+      ],
+      "system": "brand-creative",
+      "tier": "sub"
+    },
+    "commercial-assets-sales-enablement-agent": {
+      "children": [
+        "buyer-journey-collateral-mapping-subagent",
+        "competitive-battlecard-objection-handling-subagent",
+        "customer-testimonial-reference-program-subagent",
+        "one-pager-solution-brief-subagent",
+        "product-demo-feature-tour-sandbox-subagent",
+        "rfp-response-library-governance-subagent",
+        "roi-tco-calculator-modeling-subagent",
+        "sales-pitch-deck-solution-overview-subagent",
+        "sales-scripting-commercial-messaging-subagent",
+        "sales-training-certification-playbook-subagent"
+      ],
+      "contract_fields": [
+        "CONFIDENCE",
+        "GAPS"
+      ],
+      "has_agent_tool": true,
+      "parents": [
+        "product-marketing-gtm-orchestrator"
+      ],
+      "system": "product-marketing-gtm",
+      "tier": "domain"
+    },
+    "community-management-response-policy-subagent": {
+      "children": [],
+      "contract_fields": [
+        "CONFIDENCE",
+        "CITATION_CHECK",
+        "GAPS"
+      ],
+      "has_agent_tool": false,
+      "parents": [
+        "social-media-agent"
+      ],
+      "system": "digital-marketing-growth",
+      "tier": "sub"
+    },
+    "community-realtime-engagement-subagent": {
+      "children": [],
+      "contract_fields": [
+        "CONFIDENCE",
+        "GAPS"
+      ],
+      "has_agent_tool": false,
+      "parents": [
+        "organic-social-community-building-agent"
+      ],
+      "system": "brand-creative",
+      "tier": "sub"
+    },
+    "competitive-battlecard-objection-handling-subagent": {
+      "children": [],
+      "contract_fields": [
+        "CONFIDENCE",
+        "GAPS"
+      ],
+      "has_agent_tool": false,
+      "parents": [
+        "commercial-assets-sales-enablement-agent"
+      ],
+      "system": "product-marketing-gtm",
+      "tier": "sub"
+    },
+    "competitive-differentiation-category-creation-subagent": {
+      "children": [],
+      "contract_fields": [
+        "CONFIDENCE",
+        "CITATION_CHECK",
+        "GAPS"
+      ],
+      "has_agent_tool": false,
+      "parents": [
+        "brand-strategy-architecture-agent"
+      ],
+      "system": "brand-creative",
+      "tier": "sub"
+    },
+    "competitive-market-intelligence-agent": {
+      "children": [
+        "competitor-feature-benchmarking-matrix-subagent",
+        "competitor-pricing-commercial-terms-tracking-subagent",
+        "industry-trend-forecasting-horizon-scanning-subagent",
+        "ma-due-diligence-intelligence-subagent",
+        "mystery-shopping-buying-experience-audit-subagent",
+        "regulatory-legal-macro-compliance-scanning-subagent",
+        "share-of-voice-competitive-media-monitoring-subagent",
+        "supply-chain-ecosystem-value-chain-analysis-subagent",
+        "tam-sam-som-market-sizing-subagent",
+        "win-loss-deal-analysis-subagent"
+      ],
+      "contract_fields": [
+        "CONFIDENCE",
+        "GAPS"
+      ],
+      "has_agent_tool": true,
+      "parents": [
+        "market-research-insights-orchestrator"
+      ],
+      "system": "market-research",
+      "tier": "domain"
+    },
+    "competitor-feature-benchmarking-matrix-subagent": {
+      "children": [],
+      "contract_fields": [
+        "CONFIDENCE",
+        "GAPS"
+      ],
+      "has_agent_tool": false,
+      "parents": [
+        "competitive-market-intelligence-agent"
+      ],
+      "system": "market-research",
+      "tier": "sub"
+    },
+    "competitor-pricing-commercial-terms-tracking-subagent": {
+      "children": [],
+      "contract_fields": [
+        "CONFIDENCE",
+        "GAPS"
+      ],
+      "has_agent_tool": false,
+      "parents": [
+        "competitive-market-intelligence-agent"
+      ],
+      "system": "market-research",
+      "tier": "sub"
+    },
+    "competitor-red-team-agent": {
+      "children": [
+        "brand-trust-counter-strategy-subagent",
+        "channel-distribution-counter-strategy-subagent",
+        "financial-funding-counter-strategy-subagent",
+        "legal-regulatory-counter-strategy-subagent",
+        "messaging-positioning-counter-strategy-subagent",
+        "partnership-ecosystem-counter-strategy-subagent",
+        "pricing-counter-strategy-subagent",
+        "product-feature-counter-strategy-subagent",
+        "speed-execution-counter-strategy-subagent",
+        "talent-resource-counter-strategy-subagent"
+      ],
+      "contract_fields": [
+        "CONFIDENCE",
+        "CITATION_CHECK",
+        "GAPS"
+      ],
+      "has_agent_tool": true,
+      "parents": [
+        "chief-marketing-orchestrator"
+      ],
+      "system": "digital-marketing-growth",
+      "tier": "domain"
+    },
+    "component-remediation-subagent": {
+      "children": [],
+      "contract_fields": [
+        "CONFIDENCE",
+        "CITATION_CHECK",
+        "GAPS"
+      ],
+      "has_agent_tool": false,
+      "parents": [
+        "website-development-agent"
+      ],
+      "system": "digital-marketing-growth",
+      "tier": "sub"
+    },
+    "concept-prototype-testing-subagent": {
+      "children": [],
+      "contract_fields": [
+        "CONFIDENCE",
+        "GAPS"
+      ],
+      "has_agent_tool": false,
+      "parents": [
+        "primary-research-customer-discovery-agent"
+      ],
+      "system": "market-research",
+      "tier": "sub"
+    },
+    "content-audit-refresh-pruning-subagent": {
+      "children": [],
+      "contract_fields": [
+        "CONFIDENCE",
+        "GAPS"
+      ],
+      "has_agent_tool": false,
+      "parents": [
+        "content-marketing-editorial-strategy-agent"
+      ],
+      "system": "brand-creative",
+      "tier": "sub"
+    },
+    "content-cadence-format-strategy-subagent": {
+      "children": [],
+      "contract_fields": [
+        "CONFIDENCE",
+        "CITATION_CHECK",
+        "GAPS"
+      ],
+      "has_agent_tool": false,
+      "parents": [
+        "social-media-agent"
+      ],
+      "system": "digital-marketing-growth",
+      "tier": "sub"
+    },
+    "content-distribution-repurposing-subagent": {
+      "children": [],
+      "contract_fields": [
+        "CONFIDENCE",
+        "CITATION_CHECK",
+        "GAPS"
+      ],
+      "has_agent_tool": false,
+      "parents": [
+        "content-marketing-editorial-strategy-agent"
+      ],
+      "system": "brand-creative",
+      "tier": "sub"
+    },
+    "content-marketing-editorial-strategy-agent": {
+      "children": [
+        "audio-strategy-podcasting-subagent",
+        "case-study-storytelling-strategy-subagent",
+        "content-audit-refresh-pruning-subagent",
+        "content-distribution-repurposing-subagent",
+        "editorial-workflow-governance-subagent",
+        "infographic-visual-asset-strategy-subagent",
+        "interactive-content-strategy-subagent",
+        "long-form-editorial-strategy-subagent",
+        "thought-leadership-strategy-subagent",
+        "video-strategy-production-subagent"
+      ],
+      "contract_fields": [
+        "CONFIDENCE",
+        "GAPS"
+      ],
+      "has_agent_tool": true,
+      "parents": [
+        "brand-creative-orchestrator"
+      ],
+      "system": "brand-creative",
+      "tier": "domain"
+    },
+    "content-system-editorial-architecture-subagent": {
+      "children": [],
+      "contract_fields": [
+        "CONFIDENCE",
+        "GAPS"
+      ],
+      "has_agent_tool": false,
+      "parents": [
+        "marketing-strategist-agent"
+      ],
+      "system": "digital-marketing-growth",
+      "tier": "sub"
+    },
+    "contract-renewal-retention-marketing-subagent": {
+      "children": [],
+      "contract_fields": [
+        "CONFIDENCE",
+        "GAPS"
+      ],
+      "has_agent_tool": false,
+      "parents": [
+        "pricing-packaging-customer-adoption-agent"
+      ],
+      "system": "product-marketing-gtm",
+      "tier": "sub"
+    },
+    "core-brand-positioning-subagent": {
+      "children": [],
+      "contract_fields": [
+        "CONFIDENCE",
+        "GAPS"
+      ],
+      "has_agent_tool": false,
+      "parents": [
+        "brand-strategy-architecture-agent"
+      ],
+      "system": "brand-creative",
+      "tier": "sub"
+    },
+    "corporate-brand-purpose-ethics-positioning-subagent": {
+      "children": [],
+      "contract_fields": [
+        "CONFIDENCE",
+        "GAPS"
+      ],
+      "has_agent_tool": false,
+      "parents": [
+        "corporate-reputation-issues-crisis-management-agent"
+      ],
+      "system": "pr-corporate-comms",
+      "tier": "sub"
+    },
+    "corporate-reputation-issues-crisis-management-agent": {
+      "children": [
+        "corporate-brand-purpose-ethics-positioning-subagent",
+        "crisis-communications-playbook-scenario-planning-subagent",
+        "csr-campaign-strategy-subagent",
+        "esg-reporting-messaging-subagent",
+        "executive-reputation-personal-brand-subagent",
+        "government-relations-public-policy-subagent",
+        "internal-employee-communications-change-management-subagent",
+        "investor-relations-earnings-release-subagent",
+        "labor-relations-union-workplace-comms-subagent",
+        "rapid-response-issue-triage-subagent"
+      ],
+      "contract_fields": [
+        "CONFIDENCE",
+        "GAPS"
+      ],
+      "has_agent_tool": true,
+      "parents": [
+        "pr-corporate-communications-orchestrator"
+      ],
+      "system": "pr-corporate-comms",
+      "tier": "domain"
+    },
+    "creator-economy-licensing-subagent": {
+      "children": [],
+      "contract_fields": [
+        "CONFIDENCE",
+        "GAPS"
+      ],
+      "has_agent_tool": false,
+      "parents": [
+        "organic-social-community-building-agent"
+      ],
+      "system": "brand-creative",
+      "tier": "sub"
+    },
+    "crisis-communications-playbook-scenario-planning-subagent": {
+      "children": [],
+      "contract_fields": [
+        "CONFIDENCE",
+        "GAPS"
+      ],
+      "has_agent_tool": false,
+      "parents": [
+        "corporate-reputation-issues-crisis-management-agent"
+      ],
+      "system": "pr-corporate-comms",
+      "tier": "sub"
+    },
+    "crisis-sensitive-content-subagent": {
+      "children": [],
+      "contract_fields": [
+        "CONFIDENCE",
+        "GAPS"
+      ],
+      "has_agent_tool": false,
+      "parents": [
+        "writing-content-production-agent"
+      ],
+      "system": "digital-marketing-growth",
+      "tier": "sub"
+    },
+    "crisis-triage-protocol-subagent": {
+      "children": [],
+      "contract_fields": [
+        "CONFIDENCE",
+        "CITATION_CHECK",
+        "GAPS"
+      ],
+      "has_agent_tool": false,
+      "parents": [
+        "social-media-agent"
+      ],
+      "system": "digital-marketing-growth",
+      "tier": "sub"
+    },
+    "cross-functional-launch-readiness-subagent": {
+      "children": [],
+      "contract_fields": [
+        "CONFIDENCE",
+        "GAPS"
+      ],
+      "has_agent_tool": false,
+      "parents": [
+        "go-to-market-launch-strategy-agent"
+      ],
+      "system": "product-marketing-gtm",
+      "tier": "sub"
+    },
+    "cross-system-dispatch-bridge": {
+      "children": [
+        "brand-creative-orchestrator",
+        "chief-marketing-orchestrator",
+        "market-research-insights-orchestrator",
+        "pr-corporate-communications-orchestrator",
+        "product-marketing-gtm-orchestrator"
+      ],
+      "contract_fields": [],
+      "has_agent_tool": true,
+      "parents": [
+        "brand-creative-orchestrator",
+        "chief-marketing-orchestrator",
+        "enterprise-marketing-orchestrator",
+        "market-research-insights-orchestrator",
+        "pr-corporate-communications-orchestrator",
+        "product-marketing-gtm-orchestrator"
+      ],
+      "system": "cross-system",
+      "tier": "bridge"
+    },
+    "csr-campaign-strategy-subagent": {
+      "children": [],
+      "contract_fields": [
+        "CONFIDENCE",
+        "GAPS"
+      ],
+      "has_agent_tool": false,
+      "parents": [
+        "corporate-reputation-issues-crisis-management-agent"
+      ],
+      "system": "pr-corporate-comms",
+      "tier": "sub"
+    },
+    "ctv-ott-subagent": {
+      "children": [],
+      "contract_fields": [
+        "CONFIDENCE",
+        "GAPS"
+      ],
+      "has_agent_tool": false,
+      "parents": [
+        "ads-paid-media-agent"
+      ],
+      "system": "digital-marketing-growth",
+      "tier": "sub"
+    },
+    "customer-advisory-board-facilitation-subagent": {
+      "children": [],
+      "contract_fields": [
+        "CONFIDENCE",
+        "GAPS"
+      ],
+      "has_agent_tool": false,
+      "parents": [
+        "pricing-packaging-customer-adoption-agent"
+      ],
+      "system": "product-marketing-gtm",
+      "tier": "sub"
+    },
+    "customer-diary-longitudinal-research-subagent": {
+      "children": [],
+      "contract_fields": [
+        "CONFIDENCE",
+        "GAPS"
+      ],
+      "has_agent_tool": false,
+      "parents": [
+        "primary-research-customer-discovery-agent"
+      ],
+      "system": "market-research",
+      "tier": "sub"
+    },
+    "customer-journey-touchpoint-mapping-subagent": {
+      "children": [],
+      "contract_fields": [
+        "CONFIDENCE",
+        "GAPS"
+      ],
+      "has_agent_tool": false,
+      "parents": [
+        "primary-research-customer-discovery-agent"
+      ],
+      "system": "market-research",
+      "tier": "sub"
+    },
+    "customer-onboarding-nurture-subagent": {
+      "children": [],
+      "contract_fields": [
+        "CONFIDENCE",
+        "GAPS"
+      ],
+      "has_agent_tool": false,
+      "parents": [
+        "revenue-crm-agent"
+      ],
+      "system": "digital-marketing-growth",
+      "tier": "sub"
+    },
+    "customer-testimonial-reference-program-subagent": {
+      "children": [],
+      "contract_fields": [
+        "CONFIDENCE",
+        "GAPS"
+      ],
+      "has_agent_tool": false,
+      "parents": [
+        "commercial-assets-sales-enablement-agent"
+      ],
+      "system": "product-marketing-gtm",
+      "tier": "sub"
+    },
+    "data-hygiene-utm-taxonomy-governance-subagent": {
+      "children": [],
+      "contract_fields": [
+        "CONFIDENCE",
+        "GAPS"
+      ],
+      "has_agent_tool": false,
+      "parents": [
+        "marketing-analytics-attribution-modeling-agent"
+      ],
+      "system": "market-research",
+      "tier": "sub"
+    },
+    "dooh-programmatic-subagent": {
+      "children": [],
+      "contract_fields": [
+        "CONFIDENCE",
+        "GAPS"
+      ],
+      "has_agent_tool": false,
+      "parents": [
+        "ads-paid-media-agent"
+      ],
+      "system": "digital-marketing-growth",
+      "tier": "sub"
+    },
+    "dynamic-content-personalization-subagent": {
+      "children": [],
+      "contract_fields": [
+        "CONFIDENCE",
+        "GAPS"
+      ],
+      "has_agent_tool": false,
+      "parents": [
+        "growth-ops-cro-agent"
+      ],
+      "system": "digital-marketing-growth",
+      "tier": "sub"
+    },
+    "editorial-media-monitoring-clipping-subagent": {
+      "children": [],
+      "contract_fields": [
+        "CONFIDENCE",
+        "GAPS"
+      ],
+      "has_agent_tool": false,
+      "parents": [
+        "media-relations-earned-editorial-agent"
+      ],
+      "system": "pr-corporate-comms",
+      "tier": "sub"
+    },
+    "editorial-planning-interview-content-subagent": {
+      "children": [],
+      "contract_fields": [
+        "CONFIDENCE",
+        "GAPS"
+      ],
+      "has_agent_tool": false,
+      "parents": [
+        "writing-content-production-agent"
+      ],
+      "system": "digital-marketing-growth",
+      "tier": "sub"
+    },
+    "editorial-workflow-governance-subagent": {
+      "children": [],
+      "contract_fields": [
+        "CONFIDENCE",
+        "GAPS"
+      ],
+      "has_agent_tool": false,
+      "parents": [
+        "content-marketing-editorial-strategy-agent"
+      ],
+      "system": "brand-creative",
+      "tier": "sub"
+    },
+    "email-journey-drip-subagent": {
+      "children": [],
+      "contract_fields": [
+        "CONFIDENCE",
+        "GAPS"
+      ],
+      "has_agent_tool": false,
+      "parents": [
+        "revenue-crm-agent"
+      ],
+      "system": "digital-marketing-growth",
+      "tier": "sub"
+    },
+    "email-newsletter-writing-subagent": {
+      "children": [],
+      "contract_fields": [
+        "CONFIDENCE",
+        "GAPS"
+      ],
+      "has_agent_tool": false,
+      "parents": [
+        "writing-content-production-agent"
+      ],
+      "system": "digital-marketing-growth",
+      "tier": "sub"
+    },
+    "enterprise-marketing-orchestrator": {
+      "children": [
+        "cross-system-dispatch-bridge"
+      ],
+      "contract_fields": [],
+      "has_agent_tool": true,
+      "parents": [
+        "main"
+      ],
+      "system": "cross-system",
+      "tier": "entry"
+    },
+    "esg-reporting-messaging-subagent": {
+      "children": [],
+      "contract_fields": [
+        "CONFIDENCE",
+        "GAPS"
+      ],
+      "has_agent_tool": false,
+      "parents": [
+        "corporate-reputation-issues-crisis-management-agent"
+      ],
+      "system": "pr-corporate-comms",
+      "tier": "sub"
+    },
+    "ethical-ai-governance-subagent": {
+      "children": [],
+      "contract_fields": [
+        "CONFIDENCE",
+        "CITATION_CHECK",
+        "GAPS"
+      ],
+      "has_agent_tool": false,
+      "parents": [
+        "marketing-strategist-agent"
+      ],
+      "system": "digital-marketing-growth",
+      "tier": "sub"
+    },
+    "ethnographic-in-context-observation-subagent": {
+      "children": [],
+      "contract_fields": [
+        "CONFIDENCE",
+        "GAPS"
+      ],
+      "has_agent_tool": false,
+      "parents": [
+        "primary-research-customer-discovery-agent"
+      ],
+      "system": "market-research",
+      "tier": "sub"
+    },
+    "event-sponsorship-negotiation-activation-subagent": {
+      "children": [],
+      "contract_fields": [
+        "CONFIDENCE",
+        "GAPS"
+      ],
+      "has_agent_tool": false,
+      "parents": [
+        "events-experiential-marketing-agent"
+      ],
+      "system": "pr-corporate-comms",
+      "tier": "sub"
+    },
+    "events-experiential-marketing-agent": {
+      "children": [
+        "booth-architecture-spatial-design-vendor-ops-subagent",
+        "event-sponsorship-negotiation-activation-subagent",
+        "experiential-popup-guerrilla-marketing-subagent",
+        "field-marketing-roadshow-executive-dinner-subagent",
+        "post-event-lead-routing-attribution-subagent",
+        "speaker-sourcing-keynote-coaching-presentation-design-subagent",
+        "trade-show-conference-execution-subagent",
+        "user-conference-flagship-summit-subagent",
+        "vip-high-value-account-hospitality-subagent",
+        "webinar-program-digital-event-subagent"
+      ],
+      "contract_fields": [
+        "CONFIDENCE",
+        "GAPS"
+      ],
+      "has_agent_tool": true,
+      "parents": [
+        "pr-corporate-communications-orchestrator"
+      ],
+      "system": "pr-corporate-comms",
+      "tier": "domain"
+    },
+    "executive-reputation-personal-brand-subagent": {
+      "children": [],
+      "contract_fields": [
+        "CONFIDENCE",
+        "GAPS"
+      ],
+      "has_agent_tool": false,
+      "parents": [
+        "corporate-reputation-issues-crisis-management-agent"
+      ],
+      "system": "pr-corporate-comms",
+      "tier": "sub"
+    },
+    "executive-thought-leadership-op-ed-subagent": {
+      "children": [],
+      "contract_fields": [
+        "CONFIDENCE",
+        "GAPS"
+      ],
+      "has_agent_tool": false,
+      "parents": [
+        "media-relations-earned-editorial-agent"
+      ],
+      "system": "pr-corporate-comms",
+      "tier": "sub"
+    },
+    "expansion-upsell-cross-sell-strategy-subagent": {
+      "children": [],
+      "contract_fields": [
+        "CONFIDENCE",
+        "GAPS"
+      ],
+      "has_agent_tool": false,
+      "parents": [
+        "pricing-packaging-customer-adoption-agent"
+      ],
+      "system": "product-marketing-gtm",
+      "tier": "sub"
+    },
+    "experiential-popup-guerrilla-marketing-subagent": {
+      "children": [],
+      "contract_fields": [
+        "CONFIDENCE",
+        "GAPS"
+      ],
+      "has_agent_tool": false,
+      "parents": [
+        "events-experiential-marketing-agent"
+      ],
+      "system": "pr-corporate-comms",
+      "tier": "sub"
+    },
+    "fact-checking-corrective-media-inquiries-subagent": {
+      "children": [],
+      "contract_fields": [
+        "CONFIDENCE",
+        "GAPS"
+      ],
+      "has_agent_tool": false,
+      "parents": [
+        "media-relations-earned-editorial-agent"
+      ],
+      "system": "pr-corporate-comms",
+      "tier": "sub"
+    },
+    "feature-adoption-in-app-discovery-subagent": {
+      "children": [],
+      "contract_fields": [
+        "CONFIDENCE",
+        "GAPS"
+      ],
+      "has_agent_tool": false,
+      "parents": [
+        "pricing-packaging-customer-adoption-agent"
+      ],
+      "system": "product-marketing-gtm",
+      "tier": "sub"
+    },
+    "feature-packaging-bundling-addon-subagent": {
+      "children": [],
+      "contract_fields": [
+        "CONFIDENCE",
+        "GAPS"
+      ],
+      "has_agent_tool": false,
+      "parents": [
+        "pricing-packaging-customer-adoption-agent"
+      ],
+      "system": "product-marketing-gtm",
+      "tier": "sub"
+    },
+    "field-marketing-roadshow-executive-dinner-subagent": {
+      "children": [],
+      "contract_fields": [
+        "CONFIDENCE",
+        "GAPS"
+      ],
+      "has_agent_tool": false,
+      "parents": [
+        "events-experiential-marketing-agent"
+      ],
+      "system": "pr-corporate-comms",
+      "tier": "sub"
+    },
+    "financial-funding-counter-strategy-subagent": {
+      "children": [],
+      "contract_fields": [
+        "CONFIDENCE",
+        "CITATION_CHECK",
+        "GAPS"
+      ],
+      "has_agent_tool": false,
+      "parents": [
+        "competitor-red-team-agent"
+      ],
+      "system": "digital-marketing-growth",
+      "tier": "sub"
+    },
+    "focus-group-moderation-panel-subagent": {
+      "children": [],
+      "contract_fields": [
+        "CONFIDENCE",
+        "GAPS"
+      ],
+      "has_agent_tool": false,
+      "parents": [
+        "primary-research-customer-discovery-agent"
+      ],
+      "system": "market-research",
+      "tier": "sub"
+    },
+    "form-field-optimization-subagent": {
+      "children": [],
+      "contract_fields": [
+        "CONFIDENCE",
+        "GAPS"
+      ],
+      "has_agent_tool": false,
+      "parents": [
+        "growth-ops-cro-agent"
+      ],
+      "system": "digital-marketing-growth",
+      "tier": "sub"
+    },
+    "freemium-self-serve-conversion-subagent": {
+      "children": [],
+      "contract_fields": [
+        "CONFIDENCE",
+        "GAPS"
+      ],
+      "has_agent_tool": false,
+      "parents": [
+        "pricing-packaging-customer-adoption-agent"
+      ],
+      "system": "product-marketing-gtm",
+      "tier": "sub"
+    },
+    "geo-aeo-visibility-mapping-subagent": {
+      "children": [],
+      "contract_fields": [
+        "CONFIDENCE",
+        "CITATION_CHECK",
+        "GAPS"
+      ],
+      "has_agent_tool": false,
+      "parents": [
+        "marketing-strategist-agent"
+      ],
+      "system": "digital-marketing-growth",
+      "tier": "sub"
+    },
+    "go-to-market-launch-strategy-agent": {
+      "children": [
+        "beta-testing-early-access-subagent",
+        "cross-functional-launch-readiness-subagent",
+        "gtm-motion-selection-subagent",
+        "icp-persona-development-subagent",
+        "market-entry-strategy-subagent",
+        "product-channel-partner-enablement-subagent",
+        "product-market-fit-validation-subagent",
+        "product-tiered-launch-management-subagent",
+        "product-value-proposition-positioning-subagent",
+        "sunset-eol-communications-subagent"
+      ],
+      "contract_fields": [
+        "CONFIDENCE",
+        "GAPS"
+      ],
+      "has_agent_tool": true,
+      "parents": [
+        "product-marketing-gtm-orchestrator"
+      ],
+      "system": "product-marketing-gtm",
+      "tier": "domain"
+    },
+    "government-relations-public-policy-subagent": {
+      "children": [],
+      "contract_fields": [
+        "CONFIDENCE",
+        "GAPS"
+      ],
+      "has_agent_tool": false,
+      "parents": [
+        "corporate-reputation-issues-crisis-management-agent"
+      ],
+      "system": "pr-corporate-comms",
+      "tier": "sub"
+    },
+    "growth-ops-cro-agent": {
+      "children": [
+        "ab-multivariate-testing-subagent",
+        "checkout-cart-abandonment-subagent",
+        "dynamic-content-personalization-subagent",
+        "form-field-optimization-subagent",
+        "heatmap-session-recording-subagent",
+        "landing-page-funnel-friction-subagent",
+        "martech-architecture-integration-subagent",
+        "microcopy-cta-behavioral-testing-subagent",
+        "viral-loop-referral-growth-subagent",
+        "web-vitals-conversion-impact-subagent"
+      ],
+      "contract_fields": [
+        "CONFIDENCE",
+        "CITATION_CHECK",
+        "GAPS"
+      ],
+      "has_agent_tool": true,
+      "parents": [
+        "chief-marketing-orchestrator"
+      ],
+      "system": "digital-marketing-growth",
+      "tier": "domain"
+    },
+    "gtm-motion-selection-subagent": {
+      "children": [],
+      "contract_fields": [
+        "CONFIDENCE",
+        "GAPS"
+      ],
+      "has_agent_tool": false,
+      "parents": [
+        "go-to-market-launch-strategy-agent"
+      ],
+      "system": "product-marketing-gtm",
+      "tier": "sub"
+    },
+    "hashtag-discovery-strategy-subagent": {
+      "children": [],
+      "contract_fields": [
+        "CONFIDENCE",
+        "CITATION_CHECK",
+        "GAPS"
+      ],
+      "has_agent_tool": false,
+      "parents": [
+        "social-media-agent"
+      ],
+      "system": "digital-marketing-growth",
+      "tier": "sub"
+    },
+    "heatmap-session-recording-subagent": {
+      "children": [],
+      "contract_fields": [
+        "CONFIDENCE",
+        "GAPS"
+      ],
+      "has_agent_tool": false,
+      "parents": [
+        "growth-ops-cro-agent"
+      ],
+      "system": "digital-marketing-growth",
+      "tier": "sub"
+    },
+    "icp-persona-development-subagent": {
+      "children": [],
+      "contract_fields": [
+        "CONFIDENCE",
+        "GAPS"
+      ],
+      "has_agent_tool": false,
+      "parents": [
+        "go-to-market-launch-strategy-agent"
+      ],
+      "system": "product-marketing-gtm",
+      "tier": "sub"
+    },
+    "image-video-rich-media-subagent": {
+      "children": [],
+      "contract_fields": [
+        "CONFIDENCE",
+        "CITATION_CHECK",
+        "GAPS"
+      ],
+      "has_agent_tool": false,
+      "parents": [
+        "seo-agent"
+      ],
+      "system": "digital-marketing-growth",
+      "tier": "sub"
+    },
+    "in-app-guidance-interactive-walkthrough-subagent": {
+      "children": [],
+      "contract_fields": [
+        "CONFIDENCE",
+        "GAPS"
+      ],
+      "has_agent_tool": false,
+      "parents": [
+        "pricing-packaging-customer-adoption-agent"
+      ],
+      "system": "product-marketing-gtm",
+      "tier": "sub"
+    },
+    "in-depth-customer-interviews-subagent": {
+      "children": [],
+      "contract_fields": [
+        "CONFIDENCE",
+        "GAPS"
+      ],
+      "has_agent_tool": false,
+      "parents": [
+        "primary-research-customer-discovery-agent"
+      ],
+      "system": "market-research",
+      "tier": "sub"
+    },
+    "incremental-lift-media-incrementality-subagent": {
+      "children": [],
+      "contract_fields": [
+        "CONFIDENCE",
+        "GAPS"
+      ],
+      "has_agent_tool": false,
+      "parents": [
+        "marketing-analytics-attribution-modeling-agent"
+      ],
+      "system": "market-research",
+      "tier": "sub"
+    },
+    "industry-awards-research-submissions-subagent": {
+      "children": [],
+      "contract_fields": [
+        "CONFIDENCE",
+        "GAPS"
+      ],
+      "has_agent_tool": false,
+      "parents": [
+        "media-relations-earned-editorial-agent"
+      ],
+      "system": "pr-corporate-comms",
+      "tier": "sub"
+    },
+    "industry-trend-forecasting-horizon-scanning-subagent": {
+      "children": [],
+      "contract_fields": [
+        "CONFIDENCE",
+        "GAPS"
+      ],
+      "has_agent_tool": false,
+      "parents": [
+        "competitive-market-intelligence-agent"
+      ],
+      "system": "market-research",
+      "tier": "sub"
+    },
+    "influencer-creator-vetting-subagent": {
+      "children": [],
+      "contract_fields": [
+        "CONFIDENCE",
+        "CITATION_CHECK",
+        "GAPS"
+      ],
+      "has_agent_tool": false,
+      "parents": [
+        "social-media-agent"
+      ],
+      "system": "digital-marketing-growth",
+      "tier": "sub"
+    },
+    "influencer-discovery-campaign-management-subagent": {
+      "children": [],
+      "contract_fields": [
+        "CONFIDENCE",
+        "CITATION_CHECK",
+        "GAPS"
+      ],
+      "has_agent_tool": false,
+      "parents": [
+        "organic-social-community-building-agent"
+      ],
+      "system": "brand-creative",
+      "tier": "sub"
+    },
+    "infographic-visual-asset-strategy-subagent": {
+      "children": [],
+      "contract_fields": [
+        "CONFIDENCE",
+        "GAPS"
+      ],
+      "has_agent_tool": false,
+      "parents": [
+        "content-marketing-editorial-strategy-agent"
+      ],
+      "system": "brand-creative",
+      "tier": "sub"
+    },
+    "information-architecture-navigation-subagent": {
+      "children": [],
+      "contract_fields": [
+        "CONFIDENCE",
+        "CITATION_CHECK",
+        "GAPS"
+      ],
+      "has_agent_tool": false,
+      "parents": [
+        "website-development-agent"
+      ],
+      "system": "digital-marketing-growth",
+      "tier": "sub"
+    },
+    "interactive-content-strategy-subagent": {
+      "children": [],
+      "contract_fields": [
+        "CONFIDENCE",
+        "GAPS"
+      ],
+      "has_agent_tool": false,
+      "parents": [
+        "content-marketing-editorial-strategy-agent"
+      ],
+      "system": "brand-creative",
+      "tier": "sub"
+    },
+    "internal-employee-communications-change-management-subagent": {
+      "children": [],
+      "contract_fields": [
+        "CONFIDENCE",
+        "GAPS"
+      ],
+      "has_agent_tool": false,
+      "parents": [
+        "corporate-reputation-issues-crisis-management-agent"
+      ],
+      "system": "pr-corporate-comms",
+      "tier": "sub"
+    },
+    "international-multilingual-seo-subagent": {
+      "children": [],
+      "contract_fields": [
+        "CONFIDENCE",
+        "CITATION_CHECK",
+        "GAPS"
+      ],
+      "has_agent_tool": false,
+      "parents": [
+        "seo-agent"
+      ],
+      "system": "digital-marketing-growth",
+      "tier": "sub"
+    },
+    "investor-relations-earnings-release-subagent": {
+      "children": [],
+      "contract_fields": [
+        "CONFIDENCE",
+        "GAPS"
+      ],
+      "has_agent_tool": false,
+      "parents": [
+        "corporate-reputation-issues-crisis-management-agent"
+      ],
+      "system": "pr-corporate-comms",
+      "tier": "sub"
+    },
+    "journalist-relationship-management-subagent": {
+      "children": [],
+      "contract_fields": [
+        "CONFIDENCE",
+        "GAPS"
+      ],
+      "has_agent_tool": false,
+      "parents": [
+        "media-relations-earned-editorial-agent"
+      ],
+      "system": "pr-corporate-comms",
+      "tier": "sub"
+    },
+    "js-rendering-dynamic-verification-subagent": {
+      "children": [],
+      "contract_fields": [
+        "CONFIDENCE",
+        "CITATION_CHECK",
+        "GAPS"
+      ],
+      "has_agent_tool": false,
+      "parents": [
+        "website-development-agent"
+      ],
+      "system": "digital-marketing-growth",
+      "tier": "sub"
+    },
+    "jtbd-framework-research-subagent": {
+      "children": [],
+      "contract_fields": [
+        "CONFIDENCE",
+        "GAPS"
+      ],
+      "has_agent_tool": false,
+      "parents": [
+        "primary-research-customer-discovery-agent"
+      ],
+      "system": "market-research",
+      "tier": "sub"
+    },
+    "labor-relations-union-workplace-comms-subagent": {
+      "children": [],
+      "contract_fields": [
+        "CONFIDENCE",
+        "GAPS"
+      ],
+      "has_agent_tool": false,
+      "parents": [
+        "corporate-reputation-issues-crisis-management-agent"
+      ],
+      "system": "pr-corporate-comms",
+      "tier": "sub"
+    },
+    "landing-page-conversion-copy-subagent": {
+      "children": [],
+      "contract_fields": [
+        "CONFIDENCE",
+        "GAPS"
+      ],
+      "has_agent_tool": false,
+      "parents": [
+        "writing-content-production-agent"
+      ],
+      "system": "digital-marketing-growth",
+      "tier": "sub"
+    },
+    "landing-page-funnel-friction-subagent": {
+      "children": [],
+      "contract_fields": [
+        "CONFIDENCE",
+        "GAPS"
+      ],
+      "has_agent_tool": false,
+      "parents": [
+        "growth-ops-cro-agent"
+      ],
+      "system": "digital-marketing-growth",
+      "tier": "sub"
+    },
+    "lead-scoring-routing-subagent": {
+      "children": [],
+      "contract_fields": [
+        "CONFIDENCE",
+        "GAPS"
+      ],
+      "has_agent_tool": false,
+      "parents": [
+        "revenue-crm-agent"
+      ],
+      "system": "digital-marketing-growth",
+      "tier": "sub"
+    },
+    "legal-regulatory-counter-strategy-subagent": {
+      "children": [],
+      "contract_fields": [
+        "CONFIDENCE",
+        "CITATION_CHECK",
+        "GAPS"
+      ],
+      "has_agent_tool": false,
+      "parents": [
+        "competitor-red-team-agent"
+      ],
+      "system": "digital-marketing-growth",
+      "tier": "sub"
+    },
+    "live-streaming-broadcasting-subagent": {
+      "children": [],
+      "contract_fields": [
+        "CONFIDENCE",
+        "CITATION_CHECK",
+        "GAPS"
+      ],
+      "has_agent_tool": false,
+      "parents": [
+        "organic-social-community-building-agent"
+      ],
+      "system": "brand-creative",
+      "tier": "sub"
+    },
+    "local-seo-gbp-subagent": {
+      "children": [],
+      "contract_fields": [
+        "CONFIDENCE",
+        "CITATION_CHECK",
+        "GAPS"
+      ],
+      "has_agent_tool": false,
+      "parents": [
+        "seo-agent"
+      ],
+      "system": "digital-marketing-growth",
+      "tier": "sub"
+    },
+    "long-form-editorial-strategy-subagent": {
+      "children": [],
+      "contract_fields": [
+        "CONFIDENCE",
+        "GAPS"
+      ],
+      "has_agent_tool": false,
+      "parents": [
+        "content-marketing-editorial-strategy-agent"
+      ],
+      "system": "brand-creative",
+      "tier": "sub"
+    },
+    "long-form-narrative-content-subagent": {
+      "children": [],
+      "contract_fields": [
+        "CONFIDENCE",
+        "GAPS"
+      ],
+      "has_agent_tool": false,
+      "parents": [
+        "writing-content-production-agent"
+      ],
+      "system": "digital-marketing-growth",
+      "tier": "sub"
+    },
+    "loyalty-tiered-rewards-subagent": {
+      "children": [],
+      "contract_fields": [
+        "CONFIDENCE",
+        "GAPS"
+      ],
+      "has_agent_tool": false,
+      "parents": [
+        "revenue-crm-agent"
+      ],
+      "system": "digital-marketing-growth",
+      "tier": "sub"
+    },
+    "ma-due-diligence-intelligence-subagent": {
+      "children": [],
+      "contract_fields": [
+        "CONFIDENCE",
+        "GAPS"
+      ],
+      "has_agent_tool": false,
+      "parents": [
+        "competitive-market-intelligence-agent"
+      ],
+      "system": "market-research",
+      "tier": "sub"
+    },
+    "market-entry-strategy-subagent": {
+      "children": [],
+      "contract_fields": [
+        "CONFIDENCE",
+        "GAPS"
+      ],
+      "has_agent_tool": false,
+      "parents": [
+        "go-to-market-launch-strategy-agent"
+      ],
+      "system": "product-marketing-gtm",
+      "tier": "sub"
+    },
+    "market-research-insights-orchestrator": {
+      "children": [
+        "competitive-market-intelligence-agent",
+        "cross-system-dispatch-bridge",
+        "marketing-analytics-attribution-modeling-agent",
+        "primary-research-customer-discovery-agent"
+      ],
+      "contract_fields": [],
+      "has_agent_tool": true,
+      "parents": [
+        "main",
+        "cross-system-dispatch-bridge"
+      ],
+      "system": "market-research",
+      "tier": "entry"
+    },
+    "marketing-analytics-attribution-modeling-agent": {
+      "children": [
+        "cac-payback-analysis-subagent",
+        "clv-ltv-modeling-subagent",
+        "data-hygiene-utm-taxonomy-governance-subagent",
+        "incremental-lift-media-incrementality-subagent",
+        "marketing-dashboard-kpi-reporting-subagent",
+        "marketing-mix-modeling-econometric-subagent",
+        "multi-touch-attribution-modeling-subagent",
+        "predictive-propensity-modeling-subagent",
+        "product-analytics-cohort-retention-subagent",
+        "web-analytics-tagging-architecture-subagent"
+      ],
+      "contract_fields": [
+        "CONFIDENCE",
+        "GAPS"
+      ],
+      "has_agent_tool": true,
+      "parents": [
+        "market-research-insights-orchestrator"
+      ],
+      "system": "market-research",
+      "tier": "domain"
+    },
+    "marketing-dashboard-kpi-reporting-subagent": {
+      "children": [],
+      "contract_fields": [
+        "CONFIDENCE",
+        "GAPS"
+      ],
+      "has_agent_tool": false,
+      "parents": [
+        "marketing-analytics-attribution-modeling-agent"
+      ],
+      "system": "market-research",
+      "tier": "sub"
+    },
+    "marketing-mix-modeling-econometric-subagent": {
+      "children": [],
+      "contract_fields": [
+        "CONFIDENCE",
+        "GAPS"
+      ],
+      "has_agent_tool": false,
+      "parents": [
+        "marketing-analytics-attribution-modeling-agent"
+      ],
+      "system": "market-research",
+      "tier": "sub"
+    },
+    "marketing-strategist-agent": {
+      "children": [
+        "audience-persona-research-subagent",
+        "brand-asset-audit-subagent",
+        "brand-voice-extraction-subagent",
+        "content-system-editorial-architecture-subagent",
+        "ethical-ai-governance-subagent",
+        "geo-aeo-visibility-mapping-subagent",
+        "naming-verbal-identity-subagent",
+        "objective-kpi-framework-subagent",
+        "positioning-differentiation-strategy-subagent",
+        "visual-identity-brief-subagent"
+      ],
+      "contract_fields": [
+        "CONFIDENCE",
+        "CITATION_CHECK",
+        "GAPS"
+      ],
+      "has_agent_tool": true,
+      "parents": [
+        "chief-marketing-orchestrator"
+      ],
+      "system": "digital-marketing-growth",
+      "tier": "domain"
+    },
+    "martech-architecture-integration-subagent": {
+      "children": [],
+      "contract_fields": [
+        "CONFIDENCE",
+        "CITATION_CHECK",
+        "GAPS"
+      ],
+      "has_agent_tool": false,
+      "parents": [
+        "growth-ops-cro-agent"
+      ],
+      "system": "digital-marketing-growth",
+      "tier": "sub"
+    },
+    "media-kit-press-room-subagent": {
+      "children": [],
+      "contract_fields": [
+        "CONFIDENCE",
+        "GAPS"
+      ],
+      "has_agent_tool": false,
+      "parents": [
+        "media-relations-earned-editorial-agent"
+      ],
+      "system": "pr-corporate-comms",
+      "tier": "sub"
+    },
+    "media-pitching-journalist-outreach-subagent": {
+      "children": [],
+      "contract_fields": [
+        "CONFIDENCE",
+        "GAPS"
+      ],
+      "has_agent_tool": false,
+      "parents": [
+        "media-relations-earned-editorial-agent"
+      ],
+      "system": "pr-corporate-comms",
+      "tier": "sub"
+    },
+    "media-relations-earned-editorial-agent": {
+      "children": [
+        "editorial-media-monitoring-clipping-subagent",
+        "executive-thought-leadership-op-ed-subagent",
+        "fact-checking-corrective-media-inquiries-subagent",
+        "industry-awards-research-submissions-subagent",
+        "journalist-relationship-management-subagent",
+        "media-kit-press-room-subagent",
+        "media-pitching-journalist-outreach-subagent",
+        "media-training-interview-prep-subagent",
+        "press-conference-media-briefing-subagent",
+        "press-release-wire-embargo-subagent"
+      ],
+      "contract_fields": [
+        "CONFIDENCE",
+        "GAPS"
+      ],
+      "has_agent_tool": true,
+      "parents": [
+        "pr-corporate-communications-orchestrator"
+      ],
+      "system": "pr-corporate-comms",
+      "tier": "domain"
+    },
+    "media-training-interview-prep-subagent": {
+      "children": [],
+      "contract_fields": [
+        "CONFIDENCE",
+        "GAPS"
+      ],
+      "has_agent_tool": false,
+      "parents": [
+        "media-relations-earned-editorial-agent"
+      ],
+      "system": "pr-corporate-comms",
+      "tier": "sub"
+    },
+    "messaging-positioning-counter-strategy-subagent": {
+      "children": [],
+      "contract_fields": [
+        "CONFIDENCE",
+        "CITATION_CHECK",
+        "GAPS"
+      ],
+      "has_agent_tool": false,
+      "parents": [
+        "competitor-red-team-agent"
+      ],
+      "system": "digital-marketing-growth",
+      "tier": "sub"
+    },
+    "microcopy-cta-behavioral-testing-subagent": {
+      "children": [],
+      "contract_fields": [
+        "CONFIDENCE",
+        "GAPS"
+      ],
+      "has_agent_tool": false,
+      "parents": [
+        "growth-ops-cro-agent"
+      ],
+      "system": "digital-marketing-growth",
+      "tier": "sub"
+    },
+    "mobile-responsive-behavior-subagent": {
+      "children": [],
+      "contract_fields": [
+        "CONFIDENCE",
+        "CITATION_CHECK",
+        "GAPS"
+      ],
+      "has_agent_tool": false,
+      "parents": [
+        "website-development-agent"
+      ],
+      "system": "digital-marketing-growth",
+      "tier": "sub"
+    },
+    "multi-touch-attribution-modeling-subagent": {
+      "children": [],
+      "contract_fields": [
+        "CONFIDENCE",
+        "GAPS"
+      ],
+      "has_agent_tool": false,
+      "parents": [
+        "marketing-analytics-attribution-modeling-agent"
+      ],
+      "system": "market-research",
+      "tier": "sub"
+    },
+    "mystery-shopping-buying-experience-audit-subagent": {
+      "children": [],
+      "contract_fields": [
+        "CONFIDENCE",
+        "GAPS"
+      ],
+      "has_agent_tool": false,
+      "parents": [
+        "competitive-market-intelligence-agent"
+      ],
+      "system": "market-research",
+      "tier": "sub"
+    },
+    "naming-verbal-identity-subagent": {
+      "children": [],
+      "contract_fields": [
+        "CONFIDENCE",
+        "GAPS"
+      ],
+      "has_agent_tool": false,
+      "parents": [
+        "marketing-strategist-agent"
+      ],
+      "system": "digital-marketing-growth",
+      "tier": "sub"
+    },
+    "native-sponsored-content-subagent": {
+      "children": [],
+      "contract_fields": [
+        "CONFIDENCE",
+        "CITATION_CHECK",
+        "GAPS"
+      ],
+      "has_agent_tool": false,
+      "parents": [
+        "ads-paid-media-agent"
+      ],
+      "system": "digital-marketing-growth",
+      "tier": "sub"
+    },
+    "nps-csat-audit-subagent": {
+      "children": [],
+      "contract_fields": [
+        "CONFIDENCE",
+        "GAPS"
+      ],
+      "has_agent_tool": false,
+      "parents": [
+        "primary-research-customer-discovery-agent"
+      ],
+      "system": "market-research",
+      "tier": "sub"
+    },
+    "objective-kpi-framework-subagent": {
+      "children": [],
+      "contract_fields": [
+        "CONFIDENCE",
+        "GAPS"
+      ],
+      "has_agent_tool": false,
+      "parents": [
+        "marketing-strategist-agent"
+      ],
+      "system": "digital-marketing-growth",
+      "tier": "sub"
+    },
+    "off-page-digital-pr-subagent": {
+      "children": [],
+      "contract_fields": [
+        "CONFIDENCE",
+        "CITATION_CHECK",
+        "GAPS"
+      ],
+      "has_agent_tool": false,
+      "parents": [
+        "seo-agent"
+      ],
+      "system": "digital-marketing-growth",
+      "tier": "sub"
+    },
+    "on-page-optimization-subagent": {
+      "children": [],
+      "contract_fields": [
+        "CONFIDENCE",
+        "GAPS"
+      ],
+      "has_agent_tool": false,
+      "parents": [
+        "seo-agent"
+      ],
+      "system": "digital-marketing-growth",
+      "tier": "sub"
+    },
+    "one-pager-solution-brief-subagent": {
+      "children": [],
+      "contract_fields": [
+        "CONFIDENCE",
+        "GAPS"
+      ],
+      "has_agent_tool": false,
+      "parents": [
+        "commercial-assets-sales-enablement-agent"
+      ],
+      "system": "product-marketing-gtm",
+      "tier": "sub"
+    },
+    "organic-social-channel-management-subagent": {
+      "children": [],
+      "contract_fields": [
+        "CONFIDENCE",
+        "GAPS"
+      ],
+      "has_agent_tool": false,
+      "parents": [
+        "organic-social-community-building-agent"
+      ],
+      "system": "brand-creative",
+      "tier": "sub"
+    },
+    "organic-social-community-building-agent": {
+      "children": [
+        "brand-ambassador-advocate-program-subagent",
+        "community-realtime-engagement-subagent",
+        "creator-economy-licensing-subagent",
+        "influencer-discovery-campaign-management-subagent",
+        "live-streaming-broadcasting-subagent",
+        "organic-social-channel-management-subagent",
+        "private-community-operations-subagent",
+        "social-cultural-listening-subagent",
+        "social-trend-spotting-reactive-content-subagent",
+        "ugc-strategy-rights-management-subagent"
+      ],
+      "contract_fields": [
+        "CONFIDENCE",
+        "GAPS"
+      ],
+      "has_agent_tool": true,
+      "parents": [
+        "brand-creative-orchestrator"
+      ],
+      "system": "brand-creative",
+      "tier": "domain"
+    },
+    "paid-social-subagent": {
+      "children": [],
+      "contract_fields": [
+        "CONFIDENCE",
+        "CITATION_CHECK",
+        "GAPS"
+      ],
+      "has_agent_tool": false,
+      "parents": [
+        "ads-paid-media-agent"
+      ],
+      "system": "digital-marketing-growth",
+      "tier": "sub"
+    },
+    "partnership-ecosystem-counter-strategy-subagent": {
+      "children": [],
+      "contract_fields": [
+        "CONFIDENCE",
+        "CITATION_CHECK",
+        "GAPS"
+      ],
+      "has_agent_tool": false,
+      "parents": [
+        "competitor-red-team-agent"
+      ],
+      "system": "digital-marketing-growth",
+      "tier": "sub"
+    },
+    "performance-web-vitals-engineering-subagent": {
+      "children": [],
+      "contract_fields": [
+        "CONFIDENCE",
+        "CITATION_CHECK",
+        "GAPS"
+      ],
+      "has_agent_tool": false,
+      "parents": [
+        "website-development-agent"
+      ],
+      "system": "digital-marketing-growth",
+      "tier": "sub"
+    },
+    "personal-voice-hardik-subagent": {
+      "children": [],
+      "contract_fields": [
+        "CONFIDENCE",
+        "GAPS"
+      ],
+      "has_agent_tool": false,
+      "parents": [
+        "writing-content-production-agent"
+      ],
+      "system": "digital-marketing-growth",
+      "tier": "sub"
+    },
+    "platform-algorithm-adaptation-subagent": {
+      "children": [],
+      "contract_fields": [
+        "CONFIDENCE",
+        "CITATION_CHECK",
+        "GAPS"
+      ],
+      "has_agent_tool": false,
+      "parents": [
+        "social-media-agent"
+      ],
+      "system": "digital-marketing-growth",
+      "tier": "sub"
+    },
+    "platform-channel-mix-strategy-subagent": {
+      "children": [],
+      "contract_fields": [
+        "CONFIDENCE",
+        "CITATION_CHECK",
+        "GAPS"
+      ],
+      "has_agent_tool": false,
+      "parents": [
+        "social-media-agent"
+      ],
+      "system": "digital-marketing-growth",
+      "tier": "sub"
+    },
+    "positioning-differentiation-strategy-subagent": {
+      "children": [],
+      "contract_fields": [
+        "CONFIDENCE",
+        "CITATION_CHECK",
+        "GAPS"
+      ],
+      "has_agent_tool": false,
+      "parents": [
+        "marketing-strategist-agent"
+      ],
+      "system": "digital-marketing-growth",
+      "tier": "sub"
+    },
+    "post-event-lead-routing-attribution-subagent": {
+      "children": [],
+      "contract_fields": [
+        "CONFIDENCE",
+        "GAPS"
+      ],
+      "has_agent_tool": false,
+      "parents": [
+        "events-experiential-marketing-agent"
+      ],
+      "system": "pr-corporate-comms",
+      "tier": "sub"
+    },
+    "post-purchase-advocacy-subagent": {
+      "children": [],
+      "contract_fields": [
+        "CONFIDENCE",
+        "GAPS"
+      ],
+      "has_agent_tool": false,
+      "parents": [
+        "revenue-crm-agent"
+      ],
+      "system": "digital-marketing-growth",
+      "tier": "sub"
+    },
+    "pr-corporate-communications-orchestrator": {
+      "children": [
+        "corporate-reputation-issues-crisis-management-agent",
+        "cross-system-dispatch-bridge",
+        "events-experiential-marketing-agent",
+        "media-relations-earned-editorial-agent"
+      ],
+      "contract_fields": [],
+      "has_agent_tool": true,
+      "parents": [
+        "main",
+        "cross-system-dispatch-bridge"
+      ],
+      "system": "pr-corporate-comms",
+      "tier": "entry"
+    },
+    "predictive-propensity-modeling-subagent": {
+      "children": [],
+      "contract_fields": [
+        "CONFIDENCE",
+        "GAPS"
+      ],
+      "has_agent_tool": false,
+      "parents": [
+        "marketing-analytics-attribution-modeling-agent"
+      ],
+      "system": "market-research",
+      "tier": "sub"
+    },
+    "preference-center-consent-subagent": {
+      "children": [],
+      "contract_fields": [
+        "CONFIDENCE",
+        "CITATION_CHECK",
+        "GAPS"
+      ],
+      "has_agent_tool": false,
+      "parents": [
+        "revenue-crm-agent"
+      ],
+      "system": "digital-marketing-growth",
+      "tier": "sub"
+    },
+    "press-conference-media-briefing-subagent": {
+      "children": [],
+      "contract_fields": [
+        "CONFIDENCE",
+        "GAPS"
+      ],
+      "has_agent_tool": false,
+      "parents": [
+        "media-relations-earned-editorial-agent"
+      ],
+      "system": "pr-corporate-comms",
+      "tier": "sub"
+    },
+    "press-release-wire-embargo-subagent": {
+      "children": [],
+      "contract_fields": [
+        "CONFIDENCE",
+        "GAPS"
+      ],
+      "has_agent_tool": false,
+      "parents": [
+        "media-relations-earned-editorial-agent"
+      ],
+      "system": "pr-corporate-comms",
+      "tier": "sub"
+    },
+    "pricing-counter-strategy-subagent": {
+      "children": [],
+      "contract_fields": [
+        "CONFIDENCE",
+        "CITATION_CHECK",
+        "GAPS"
+      ],
+      "has_agent_tool": false,
+      "parents": [
+        "competitor-red-team-agent"
+      ],
+      "system": "digital-marketing-growth",
+      "tier": "sub"
+    },
+    "pricing-packaging-customer-adoption-agent": {
+      "children": [
+        "churn-root-cause-winback-offer-modeling-subagent",
+        "contract-renewal-retention-marketing-subagent",
+        "customer-advisory-board-facilitation-subagent",
+        "expansion-upsell-cross-sell-strategy-subagent",
+        "feature-adoption-in-app-discovery-subagent",
+        "feature-packaging-bundling-addon-subagent",
+        "freemium-self-serve-conversion-subagent",
+        "in-app-guidance-interactive-walkthrough-subagent",
+        "pricing-tier-design-value-metric-subagent",
+        "user-onboarding-activation-flow-subagent"
+      ],
+      "contract_fields": [
+        "CONFIDENCE",
+        "GAPS"
+      ],
+      "has_agent_tool": true,
+      "parents": [
+        "product-marketing-gtm-orchestrator"
+      ],
+      "system": "product-marketing-gtm",
+      "tier": "domain"
+    },
+    "pricing-tier-design-value-metric-subagent": {
+      "children": [],
+      "contract_fields": [
+        "CONFIDENCE",
+        "GAPS"
+      ],
+      "has_agent_tool": false,
+      "parents": [
+        "pricing-packaging-customer-adoption-agent"
+      ],
+      "system": "product-marketing-gtm",
+      "tier": "sub"
+    },
+    "primary-research-customer-discovery-agent": {
+      "children": [
+        "concept-prototype-testing-subagent",
+        "customer-diary-longitudinal-research-subagent",
+        "customer-journey-touchpoint-mapping-subagent",
+        "ethnographic-in-context-observation-subagent",
+        "focus-group-moderation-panel-subagent",
+        "in-depth-customer-interviews-subagent",
+        "jtbd-framework-research-subagent",
+        "nps-csat-audit-subagent",
+        "quantitative-survey-design-sampling-subagent",
+        "usability-ux-research-subagent"
+      ],
+      "contract_fields": [
+        "CONFIDENCE",
+        "GAPS"
+      ],
+      "has_agent_tool": true,
+      "parents": [
+        "market-research-insights-orchestrator"
+      ],
+      "system": "market-research",
+      "tier": "domain"
+    },
+    "private-community-operations-subagent": {
+      "children": [],
+      "contract_fields": [
+        "CONFIDENCE",
+        "CITATION_CHECK",
+        "GAPS"
+      ],
+      "has_agent_tool": false,
+      "parents": [
+        "organic-social-community-building-agent"
+      ],
+      "system": "brand-creative",
+      "tier": "sub"
+    },
+    "product-analytics-cohort-retention-subagent": {
+      "children": [],
+      "contract_fields": [
+        "CONFIDENCE",
+        "GAPS"
+      ],
+      "has_agent_tool": false,
+      "parents": [
+        "marketing-analytics-attribution-modeling-agent"
+      ],
+      "system": "market-research",
+      "tier": "sub"
+    },
+    "product-channel-partner-enablement-subagent": {
+      "children": [],
+      "contract_fields": [
+        "CONFIDENCE",
+        "GAPS"
+      ],
+      "has_agent_tool": false,
+      "parents": [
+        "go-to-market-launch-strategy-agent"
+      ],
+      "system": "product-marketing-gtm",
+      "tier": "sub"
+    },
+    "product-demo-feature-tour-sandbox-subagent": {
+      "children": [],
+      "contract_fields": [
+        "CONFIDENCE",
+        "GAPS"
+      ],
+      "has_agent_tool": false,
+      "parents": [
+        "commercial-assets-sales-enablement-agent"
+      ],
+      "system": "product-marketing-gtm",
+      "tier": "sub"
+    },
+    "product-feature-counter-strategy-subagent": {
+      "children": [],
+      "contract_fields": [
+        "CONFIDENCE",
+        "CITATION_CHECK",
+        "GAPS"
+      ],
+      "has_agent_tool": false,
+      "parents": [
+        "competitor-red-team-agent"
+      ],
+      "system": "digital-marketing-growth",
+      "tier": "sub"
+    },
+    "product-market-fit-validation-subagent": {
+      "children": [],
+      "contract_fields": [
+        "CONFIDENCE",
+        "GAPS"
+      ],
+      "has_agent_tool": false,
+      "parents": [
+        "go-to-market-launch-strategy-agent"
+      ],
+      "system": "product-marketing-gtm",
+      "tier": "sub"
+    },
+    "product-marketing-gtm-orchestrator": {
+      "children": [
+        "commercial-assets-sales-enablement-agent",
+        "cross-system-dispatch-bridge",
+        "go-to-market-launch-strategy-agent",
+        "pricing-packaging-customer-adoption-agent"
+      ],
+      "contract_fields": [],
+      "has_agent_tool": true,
+      "parents": [
+        "main",
+        "cross-system-dispatch-bridge"
+      ],
+      "system": "product-marketing-gtm",
+      "tier": "entry"
+    },
+    "product-tiered-launch-management-subagent": {
+      "children": [],
+      "contract_fields": [
+        "CONFIDENCE",
+        "GAPS"
+      ],
+      "has_agent_tool": false,
+      "parents": [
+        "go-to-market-launch-strategy-agent"
+      ],
+      "system": "product-marketing-gtm",
+      "tier": "sub"
+    },
+    "product-value-proposition-positioning-subagent": {
+      "children": [],
+      "contract_fields": [
+        "CONFIDENCE",
+        "GAPS"
+      ],
+      "has_agent_tool": false,
+      "parents": [
+        "go-to-market-launch-strategy-agent"
+      ],
+      "system": "product-marketing-gtm",
+      "tier": "sub"
+    },
+    "programmatic-display-dsp-subagent": {
+      "children": [],
+      "contract_fields": [
+        "CONFIDENCE",
+        "GAPS"
+      ],
+      "has_agent_tool": false,
+      "parents": [
+        "ads-paid-media-agent"
+      ],
+      "system": "digital-marketing-growth",
+      "tier": "sub"
+    },
+    "programmatic-seo-subagent": {
+      "children": [],
+      "contract_fields": [
+        "CONFIDENCE",
+        "CITATION_CHECK",
+        "GAPS"
+      ],
+      "has_agent_tool": false,
+      "parents": [
+        "seo-agent"
+      ],
+      "system": "digital-marketing-growth",
+      "tier": "sub"
+    },
+    "push-inapp-messaging-subagent": {
+      "children": [],
+      "contract_fields": [
+        "CONFIDENCE",
+        "GAPS"
+      ],
+      "has_agent_tool": false,
+      "parents": [
+        "revenue-crm-agent"
+      ],
+      "system": "digital-marketing-growth",
+      "tier": "sub"
+    },
+    "quantitative-survey-design-sampling-subagent": {
+      "children": [],
+      "contract_fields": [
+        "CONFIDENCE",
+        "GAPS"
+      ],
+      "has_agent_tool": false,
+      "parents": [
+        "primary-research-customer-discovery-agent"
+      ],
+      "system": "market-research",
+      "tier": "sub"
+    },
+    "rapid-response-issue-triage-subagent": {
+      "children": [],
+      "contract_fields": [
+        "CONFIDENCE",
+        "GAPS"
+      ],
+      "has_agent_tool": false,
+      "parents": [
+        "corporate-reputation-issues-crisis-management-agent"
+      ],
+      "system": "pr-corporate-comms",
+      "tier": "sub"
+    },
+    "rebranding-evolution-subagent": {
+      "children": [],
+      "contract_fields": [
+        "CONFIDENCE",
+        "GAPS"
+      ],
+      "has_agent_tool": false,
+      "parents": [
+        "brand-strategy-architecture-agent"
+      ],
+      "system": "brand-creative",
+      "tier": "sub"
+    },
+    "regulatory-legal-macro-compliance-scanning-subagent": {
+      "children": [],
+      "contract_fields": [
+        "CONFIDENCE",
+        "GAPS"
+      ],
+      "has_agent_tool": false,
+      "parents": [
+        "competitive-market-intelligence-agent"
+      ],
+      "system": "market-research",
+      "tier": "sub"
+    },
+    "retail-media-subagent": {
+      "children": [],
+      "contract_fields": [
+        "CONFIDENCE",
+        "GAPS"
+      ],
+      "has_agent_tool": false,
+      "parents": [
+        "ads-paid-media-agent"
+      ],
+      "system": "digital-marketing-growth",
+      "tier": "sub"
+    },
+    "retargeting-dynamic-remarketing-subagent": {
+      "children": [],
+      "contract_fields": [
+        "CONFIDENCE",
+        "GAPS"
+      ],
+      "has_agent_tool": false,
+      "parents": [
+        "ads-paid-media-agent"
+      ],
+      "system": "digital-marketing-growth",
+      "tier": "sub"
+    },
+    "revenue-crm-agent": {
+      "children": [
+        "churn-prediction-winback-subagent",
+        "customer-onboarding-nurture-subagent",
+        "email-journey-drip-subagent",
+        "lead-scoring-routing-subagent",
+        "loyalty-tiered-rewards-subagent",
+        "post-purchase-advocacy-subagent",
+        "preference-center-consent-subagent",
+        "push-inapp-messaging-subagent",
+        "rfm-segmentation-subagent",
+        "sms-conversational-messaging-subagent"
+      ],
+      "contract_fields": [
+        "CONFIDENCE",
+        "GAPS"
+      ],
+      "has_agent_tool": true,
+      "parents": [
+        "chief-marketing-orchestrator"
+      ],
+      "system": "digital-marketing-growth",
+      "tier": "domain"
+    },
+    "rfm-segmentation-subagent": {
+      "children": [],
+      "contract_fields": [
+        "CONFIDENCE",
+        "GAPS"
+      ],
+      "has_agent_tool": false,
+      "parents": [
+        "revenue-crm-agent"
+      ],
+      "system": "digital-marketing-growth",
+      "tier": "sub"
+    },
+    "rfp-response-library-governance-subagent": {
+      "children": [],
+      "contract_fields": [
+        "CONFIDENCE",
+        "GAPS"
+      ],
+      "has_agent_tool": false,
+      "parents": [
+        "commercial-assets-sales-enablement-agent"
+      ],
+      "system": "product-marketing-gtm",
+      "tier": "sub"
+    },
+    "roi-tco-calculator-modeling-subagent": {
+      "children": [],
+      "contract_fields": [
+        "CONFIDENCE",
+        "GAPS"
+      ],
+      "has_agent_tool": false,
+      "parents": [
+        "commercial-assets-sales-enablement-agent"
+      ],
+      "system": "product-marketing-gtm",
+      "tier": "sub"
+    },
+    "sales-pitch-deck-solution-overview-subagent": {
+      "children": [],
+      "contract_fields": [
+        "CONFIDENCE",
+        "GAPS"
+      ],
+      "has_agent_tool": false,
+      "parents": [
+        "commercial-assets-sales-enablement-agent"
+      ],
+      "system": "product-marketing-gtm",
+      "tier": "sub"
+    },
+    "sales-scripting-commercial-messaging-subagent": {
+      "children": [],
+      "contract_fields": [
+        "CONFIDENCE",
+        "GAPS"
+      ],
+      "has_agent_tool": false,
+      "parents": [
+        "commercial-assets-sales-enablement-agent"
+      ],
+      "system": "product-marketing-gtm",
+      "tier": "sub"
+    },
+    "sales-training-certification-playbook-subagent": {
+      "children": [],
+      "contract_fields": [
+        "CONFIDENCE",
+        "GAPS"
+      ],
+      "has_agent_tool": false,
+      "parents": [
+        "commercial-assets-sales-enablement-agent"
+      ],
+      "system": "product-marketing-gtm",
+      "tier": "sub"
+    },
+    "security-posture-auditing-subagent": {
+      "children": [],
+      "contract_fields": [
+        "CONFIDENCE",
+        "CITATION_CHECK",
+        "GAPS"
+      ],
+      "has_agent_tool": false,
+      "parents": [
+        "website-development-agent"
+      ],
+      "system": "digital-marketing-growth",
+      "tier": "sub"
+    },
+    "sem-paid-search-subagent": {
+      "children": [],
+      "contract_fields": [
+        "CONFIDENCE",
+        "CITATION_CHECK",
+        "GAPS"
+      ],
+      "has_agent_tool": false,
+      "parents": [
+        "ads-paid-media-agent"
+      ],
+      "system": "digital-marketing-growth",
+      "tier": "sub"
+    },
+    "semantic-schema-architecture-subagent": {
+      "children": [],
+      "contract_fields": [
+        "CONFIDENCE",
+        "CITATION_CHECK",
+        "GAPS"
+      ],
+      "has_agent_tool": false,
+      "parents": [
+        "seo-agent"
+      ],
+      "system": "digital-marketing-growth",
+      "tier": "sub"
+    },
+    "sentiment-social-listening-subagent": {
+      "children": [],
+      "contract_fields": [
+        "CONFIDENCE",
+        "CITATION_CHECK",
+        "GAPS"
+      ],
+      "has_agent_tool": false,
+      "parents": [
+        "social-media-agent"
+      ],
+      "system": "digital-marketing-growth",
+      "tier": "sub"
+    },
+    "seo-agent": {
+      "children": [
+        "aeo-geo-subagent",
+        "aso-subagent",
+        "image-video-rich-media-subagent",
+        "international-multilingual-seo-subagent",
+        "local-seo-gbp-subagent",
+        "off-page-digital-pr-subagent",
+        "on-page-optimization-subagent",
+        "programmatic-seo-subagent",
+        "semantic-schema-architecture-subagent",
+        "technical-seo-subagent"
+      ],
+      "contract_fields": [
+        "CONFIDENCE",
+        "CITATION_CHECK",
+        "GAPS"
+      ],
+      "has_agent_tool": true,
+      "parents": [
+        "chief-marketing-orchestrator"
+      ],
+      "system": "digital-marketing-growth",
+      "tier": "domain"
+    },
+    "seo-content-drafting-subagent": {
+      "children": [],
+      "contract_fields": [
+        "CONFIDENCE",
+        "GAPS"
+      ],
+      "has_agent_tool": false,
+      "parents": [
+        "writing-content-production-agent"
+      ],
+      "system": "digital-marketing-growth",
+      "tier": "sub"
+    },
+    "share-of-voice-competitive-media-monitoring-subagent": {
+      "children": [],
+      "contract_fields": [
+        "CONFIDENCE",
+        "GAPS"
+      ],
+      "has_agent_tool": false,
+      "parents": [
+        "competitive-market-intelligence-agent"
+      ],
+      "system": "market-research",
+      "tier": "sub"
+    },
+    "short-form-platform-copy-subagent": {
+      "children": [],
+      "contract_fields": [
+        "CONFIDENCE",
+        "GAPS"
+      ],
+      "has_agent_tool": false,
+      "parents": [
+        "writing-content-production-agent"
+      ],
+      "system": "digital-marketing-growth",
+      "tier": "sub"
+    },
+    "sms-conversational-messaging-subagent": {
+      "children": [],
+      "contract_fields": [
+        "CONFIDENCE",
+        "CITATION_CHECK",
+        "GAPS"
+      ],
+      "has_agent_tool": false,
+      "parents": [
+        "revenue-crm-agent"
+      ],
+      "system": "digital-marketing-growth",
+      "tier": "sub"
+    },
+    "social-commerce-shoppable-content-subagent": {
+      "children": [],
+      "contract_fields": [
+        "CONFIDENCE",
+        "CITATION_CHECK",
+        "GAPS"
+      ],
+      "has_agent_tool": false,
+      "parents": [
+        "social-media-agent"
+      ],
+      "system": "digital-marketing-growth",
+      "tier": "sub"
+    },
+    "social-community-content-subagent": {
+      "children": [],
+      "contract_fields": [
+        "CONFIDENCE",
+        "GAPS"
+      ],
+      "has_agent_tool": false,
+      "parents": [
+        "writing-content-production-agent"
+      ],
+      "system": "digital-marketing-growth",
+      "tier": "sub"
+    },
+    "social-cultural-listening-subagent": {
+      "children": [],
+      "contract_fields": [
+        "CONFIDENCE",
+        "CITATION_CHECK",
+        "GAPS"
+      ],
+      "has_agent_tool": false,
+      "parents": [
+        "organic-social-community-building-agent"
+      ],
+      "system": "brand-creative",
+      "tier": "sub"
+    },
+    "social-media-agent": {
+      "children": [
+        "community-management-response-policy-subagent",
+        "content-cadence-format-strategy-subagent",
+        "crisis-triage-protocol-subagent",
+        "hashtag-discovery-strategy-subagent",
+        "influencer-creator-vetting-subagent",
+        "platform-algorithm-adaptation-subagent",
+        "platform-channel-mix-strategy-subagent",
+        "sentiment-social-listening-subagent",
+        "social-commerce-shoppable-content-subagent",
+        "ugc-community-content-strategy-subagent"
+      ],
+      "contract_fields": [
+        "CONFIDENCE",
+        "CITATION_CHECK",
+        "GAPS"
+      ],
+      "has_agent_tool": true,
+      "parents": [
+        "chief-marketing-orchestrator"
+      ],
+      "system": "digital-marketing-growth",
+      "tier": "domain"
+    },
+    "social-trend-spotting-reactive-content-subagent": {
+      "children": [],
+      "contract_fields": [
+        "CONFIDENCE",
+        "CITATION_CHECK",
+        "GAPS"
+      ],
+      "has_agent_tool": false,
+      "parents": [
+        "organic-social-community-building-agent"
+      ],
+      "system": "brand-creative",
+      "tier": "sub"
+    },
+    "speaker-sourcing-keynote-coaching-presentation-design-subagent": {
+      "children": [],
+      "contract_fields": [
+        "CONFIDENCE",
+        "GAPS"
+      ],
+      "has_agent_tool": false,
+      "parents": [
+        "events-experiential-marketing-agent"
+      ],
+      "system": "pr-corporate-comms",
+      "tier": "sub"
+    },
+    "speed-execution-counter-strategy-subagent": {
+      "children": [],
+      "contract_fields": [
+        "CONFIDENCE",
+        "CITATION_CHECK",
+        "GAPS"
+      ],
+      "has_agent_tool": false,
+      "parents": [
+        "competitor-red-team-agent"
+      ],
+      "system": "digital-marketing-growth",
+      "tier": "sub"
+    },
+    "structural-wireframing-subagent": {
+      "children": [],
+      "contract_fields": [
+        "CONFIDENCE",
+        "CITATION_CHECK",
+        "GAPS"
+      ],
+      "has_agent_tool": false,
+      "parents": [
+        "website-development-agent"
+      ],
+      "system": "digital-marketing-growth",
+      "tier": "sub"
+    },
+    "sunset-eol-communications-subagent": {
+      "children": [],
+      "contract_fields": [
+        "CONFIDENCE",
+        "GAPS"
+      ],
+      "has_agent_tool": false,
+      "parents": [
+        "go-to-market-launch-strategy-agent"
+      ],
+      "system": "product-marketing-gtm",
+      "tier": "sub"
+    },
+    "supply-chain-ecosystem-value-chain-analysis-subagent": {
+      "children": [],
+      "contract_fields": [
+        "CONFIDENCE",
+        "GAPS"
+      ],
+      "has_agent_tool": false,
+      "parents": [
+        "competitive-market-intelligence-agent"
+      ],
+      "system": "market-research",
+      "tier": "sub"
+    },
+    "talent-resource-counter-strategy-subagent": {
+      "children": [],
+      "contract_fields": [
+        "CONFIDENCE",
+        "CITATION_CHECK",
+        "GAPS"
+      ],
+      "has_agent_tool": false,
+      "parents": [
+        "competitor-red-team-agent"
+      ],
+      "system": "digital-marketing-growth",
+      "tier": "sub"
+    },
+    "tam-sam-som-market-sizing-subagent": {
+      "children": [],
+      "contract_fields": [
+        "CONFIDENCE",
+        "GAPS"
+      ],
+      "has_agent_tool": false,
+      "parents": [
+        "competitive-market-intelligence-agent"
+      ],
+      "system": "market-research",
+      "tier": "sub"
+    },
+    "tech-stack-fingerprinting-subagent": {
+      "children": [],
+      "contract_fields": [
+        "CONFIDENCE",
+        "CITATION_CHECK",
+        "GAPS"
+      ],
+      "has_agent_tool": false,
+      "parents": [
+        "website-development-agent"
+      ],
+      "system": "digital-marketing-growth",
+      "tier": "sub"
+    },
+    "technical-seo-subagent": {
+      "children": [],
+      "contract_fields": [
+        "CONFIDENCE",
+        "CITATION_CHECK",
+        "GAPS"
+      ],
+      "has_agent_tool": false,
+      "parents": [
+        "seo-agent"
+      ],
+      "system": "digital-marketing-growth",
+      "tier": "sub"
+    },
+    "thought-leadership-strategy-subagent": {
+      "children": [],
+      "contract_fields": [
+        "CONFIDENCE",
+        "CITATION_CHECK",
+        "GAPS"
+      ],
+      "has_agent_tool": false,
+      "parents": [
+        "content-marketing-editorial-strategy-agent"
+      ],
+      "system": "brand-creative",
+      "tier": "sub"
+    },
+    "trade-show-conference-execution-subagent": {
+      "children": [],
+      "contract_fields": [
+        "CONFIDENCE",
+        "GAPS"
+      ],
+      "has_agent_tool": false,
+      "parents": [
+        "events-experiential-marketing-agent"
+      ],
+      "system": "pr-corporate-comms",
+      "tier": "sub"
+    },
+    "trademark-ip-governance-subagent": {
+      "children": [],
+      "contract_fields": [
+        "CONFIDENCE",
+        "GAPS"
+      ],
+      "has_agent_tool": false,
+      "parents": [
+        "brand-strategy-architecture-agent"
+      ],
+      "system": "brand-creative",
+      "tier": "sub"
+    },
+    "ugc-community-content-strategy-subagent": {
+      "children": [],
+      "contract_fields": [
+        "CONFIDENCE",
+        "CITATION_CHECK",
+        "GAPS"
+      ],
+      "has_agent_tool": false,
+      "parents": [
+        "social-media-agent"
+      ],
+      "system": "digital-marketing-growth",
+      "tier": "sub"
+    },
+    "ugc-strategy-rights-management-subagent": {
+      "children": [],
+      "contract_fields": [
+        "CONFIDENCE",
+        "GAPS"
+      ],
+      "has_agent_tool": false,
+      "parents": [
+        "organic-social-community-building-agent"
+      ],
+      "system": "brand-creative",
+      "tier": "sub"
+    },
+    "usability-ux-research-subagent": {
+      "children": [],
+      "contract_fields": [
+        "CONFIDENCE",
+        "GAPS"
+      ],
+      "has_agent_tool": false,
+      "parents": [
+        "primary-research-customer-discovery-agent"
+      ],
+      "system": "market-research",
+      "tier": "sub"
+    },
+    "user-conference-flagship-summit-subagent": {
+      "children": [],
+      "contract_fields": [
+        "CONFIDENCE",
+        "GAPS"
+      ],
+      "has_agent_tool": false,
+      "parents": [
+        "events-experiential-marketing-agent"
+      ],
+      "system": "pr-corporate-comms",
+      "tier": "sub"
+    },
+    "user-onboarding-activation-flow-subagent": {
+      "children": [],
+      "contract_fields": [
+        "CONFIDENCE",
+        "GAPS"
+      ],
+      "has_agent_tool": false,
+      "parents": [
+        "pricing-packaging-customer-adoption-agent"
+      ],
+      "system": "product-marketing-gtm",
+      "tier": "sub"
+    },
+    "video-strategy-production-subagent": {
+      "children": [],
+      "contract_fields": [
+        "CONFIDENCE",
+        "GAPS"
+      ],
+      "has_agent_tool": false,
+      "parents": [
+        "content-marketing-editorial-strategy-agent"
+      ],
+      "system": "brand-creative",
+      "tier": "sub"
+    },
+    "vip-high-value-account-hospitality-subagent": {
+      "children": [],
+      "contract_fields": [
+        "CONFIDENCE",
+        "GAPS"
+      ],
+      "has_agent_tool": false,
+      "parents": [
+        "events-experiential-marketing-agent"
+      ],
+      "system": "pr-corporate-comms",
+      "tier": "sub"
+    },
+    "viral-loop-referral-growth-subagent": {
+      "children": [],
+      "contract_fields": [
+        "CONFIDENCE",
+        "GAPS"
+      ],
+      "has_agent_tool": false,
+      "parents": [
+        "growth-ops-cro-agent"
+      ],
+      "system": "digital-marketing-growth",
+      "tier": "sub"
+    },
+    "visual-identity-brief-subagent": {
+      "children": [],
+      "contract_fields": [
+        "CONFIDENCE",
+        "GAPS"
+      ],
+      "has_agent_tool": false,
+      "parents": [
+        "marketing-strategist-agent"
+      ],
+      "system": "digital-marketing-growth",
+      "tier": "sub"
+    },
+    "web-analytics-tagging-architecture-subagent": {
+      "children": [],
+      "contract_fields": [
+        "CONFIDENCE",
+        "GAPS"
+      ],
+      "has_agent_tool": false,
+      "parents": [
+        "marketing-analytics-attribution-modeling-agent"
+      ],
+      "system": "market-research",
+      "tier": "sub"
+    },
+    "web-vitals-conversion-impact-subagent": {
+      "children": [],
+      "contract_fields": [
+        "CONFIDENCE",
+        "CITATION_CHECK",
+        "GAPS"
+      ],
+      "has_agent_tool": false,
+      "parents": [
+        "growth-ops-cro-agent"
+      ],
+      "system": "digital-marketing-growth",
+      "tier": "sub"
+    },
+    "webinar-program-digital-event-subagent": {
+      "children": [],
+      "contract_fields": [
+        "CONFIDENCE",
+        "GAPS"
+      ],
+      "has_agent_tool": false,
+      "parents": [
+        "events-experiential-marketing-agent"
+      ],
+      "system": "pr-corporate-comms",
+      "tier": "sub"
+    },
+    "website-development-agent": {
+      "children": [
+        "accessibility-wcag-auditing-subagent",
+        "broken-link-dead-page-scanning-subagent",
+        "component-remediation-subagent",
+        "information-architecture-navigation-subagent",
+        "js-rendering-dynamic-verification-subagent",
+        "mobile-responsive-behavior-subagent",
+        "performance-web-vitals-engineering-subagent",
+        "security-posture-auditing-subagent",
+        "structural-wireframing-subagent",
+        "tech-stack-fingerprinting-subagent"
+      ],
+      "contract_fields": [
+        "CONFIDENCE",
+        "CITATION_CHECK",
+        "GAPS"
+      ],
+      "has_agent_tool": true,
+      "parents": [
+        "chief-marketing-orchestrator"
+      ],
+      "system": "digital-marketing-growth",
+      "tier": "domain"
+    },
+    "win-loss-deal-analysis-subagent": {
+      "children": [],
+      "contract_fields": [
+        "CONFIDENCE",
+        "GAPS"
+      ],
+      "has_agent_tool": false,
+      "parents": [
+        "competitive-market-intelligence-agent"
+      ],
+      "system": "market-research",
+      "tier": "sub"
+    },
+    "writing-content-production-agent": {
+      "children": [
+        "case-study-social-proof-subagent",
+        "crisis-sensitive-content-subagent",
+        "editorial-planning-interview-content-subagent",
+        "email-newsletter-writing-subagent",
+        "landing-page-conversion-copy-subagent",
+        "long-form-narrative-content-subagent",
+        "personal-voice-hardik-subagent",
+        "seo-content-drafting-subagent",
+        "short-form-platform-copy-subagent",
+        "social-community-content-subagent"
+      ],
+      "contract_fields": [
+        "CONFIDENCE",
+        "GAPS"
+      ],
+      "has_agent_tool": true,
+      "parents": [
+        "chief-marketing-orchestrator"
+      ],
+      "system": "digital-marketing-growth",
+      "tier": "domain"
+    }
+  },
+  "entry_points": [
+    "brand-creative-orchestrator",
+    "chief-marketing-orchestrator",
+    "enterprise-marketing-orchestrator",
+    "market-research-insights-orchestrator",
+    "pr-corporate-communications-orchestrator",
+    "product-marketing-gtm-orchestrator"
+  ],
+  "generated_at": "2026-09-25T10:01:46Z",
+  "generated_from": ".claude/agents",
+  "knowledge_bases": [
+    "knowledge-bases/ads-knowledge-base.md",
+    "knowledge-bases/brand-creative-knowledge-base.md",
+    "knowledge-bases/market-research-knowledge-base.md",
+    "knowledge-bases/marketing-knowledge-base.md",
+    "knowledge-bases/pr-corporate-communications-knowledge-base.md",
+    "knowledge-bases/product-marketing-gtm-knowledge-base.md",
+    "knowledge-bases/seo-knowledge-base.md"
+  ],
+  "version": 1
+}

@@ -1,0 +1,20 @@
+{
+  "_comment": "Copy this file's real-credential version to config.json (already this filename — fill in and NEVER commit real tokens; add config.json to .gitignore for this workflow).",
+
+  "instagram": {
+    "enabled": true,
+    "access_token": "REPLACE_WITH_INSTAGRAM_PAGE_ACCESS_TOKEN",
+    "_help": "Facebook Developers → Your App → Instagram Graph API. Requires instagram_basic + instagram_manage_insights scopes on a Business/Creator account linked to a Facebook Page. Read-only scopes only — never request publish permissions for this connector."
+  },
+
+  "linkedin": {
+    "enabled": true,
+    "access_token": "REPLACE_WITH_LINKEDIN_OAUTH_TOKEN",
+    "_help": "LinkedIn Developer Portal → Marketing API access (requires application/approval). Request r_organization_social read scope only."
+  },
+
+  "accounts": [
+    {"platform": "instagram", "handle_or_id": "REPLACE_WITH_IG_USER_ID"},
+    {"platform": "linkedin", "handle_or_id": "urn:li:organization:REPLACE_WITH_ORG_ID"}
+  ]
+}
